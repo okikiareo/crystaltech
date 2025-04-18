@@ -1,0 +1,4 @@
+.services-list {
+    flex-direction: column;
+    row-gap: 1em;
+}

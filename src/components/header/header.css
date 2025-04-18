@@ -1,0 +1,159 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4000;
+    background-color: transparent;
+}
+
+.header.glue {
+    background-color: var(--bgrd200);
+    box-shadow: 0 0 0 1px var(--ring100);
+}
+
+.header-wrap {
+    position: relative;
+    height: var(--header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.header-logo {
+    font-size: var(--fs-500);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--type);
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-list-item {
+    margin-bottom: var(--sp-600);
+    text-transform: uppercase;
+}
+
+.header-list-link {
+    font-size: var(--fs-400);
+}
+
+.header-ctrl {
+    width: 26px;
+    position: relative;
+    display: none;
+    row-gap: 0.4em;
+    flex-direction: column;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+
+.header-ctrl-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--bgrdA10);
+    display: block;
+    transition: transform 500ms;
+}
+
+.open .header-list {
+    display: block;
+}
+
+.open .header-ctrl {
+    transform: rotate(0deg);
+}
+
+.open .header-ctrl-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.open .header-ctrl-line:nth-child(1) {
+    transform: rotate(+45deg);
+}
+
+.open .header-ctrl-line:nth-child(2) {
+    opacity: 0;
+}
+
+.open .header-ctrl-line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.header-wave {
+    --size: 360px;
+    --wave: wave 800ms infinite;
+    width: var(--size) !important;
+    height: var(--size) !important;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    overflow: hidden;
+}
+
+
+@media (max-width: 62em) {
+    .header-logo,
+    .header-ctrl {
+        position: relative;
+        z-index: 4000;
+    }
+
+    .header-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: var(--header);
+        padding-left: 5%;
+        padding-right: 5%;
+        display: none;
+        z-index: 3000;
+        background-color: var(--bgrd200);
+    }
+
+    .header-ctrl {
+        display: flex;
+    }
+}
+
+@media (min-width: 62em) {
+    .header-ctrl {
+        display: none;
+    }
+
+    .header-menu {
+        display: flex;
+        align-items: center;
+        column-gap: 4em;
+    }
+
+    .header-list {
+        display: flex !important;
+        /* !important - Due to specificity on mobile view - LN 65 */
+        column-gap: 4em;
+        position: initial;
+        padding: 0;
+        background-color: initial;
+        height: auto;
+    }
+
+    .header-wave {
+        display: none;
+    }
+
+    .header-list-item {
+        margin-bottom: 0;
+    }
+
+    .header-list-link {
+        font-weight: 400;
+    }
+}

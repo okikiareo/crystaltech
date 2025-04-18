@@ -1,0 +1,116 @@
+.hero-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--sp-800);
+}
+
+.hero-view {
+    --size: 400px;
+    position: relative;
+    margin-bottom: var(--sp-700);
+}
+
+.hero-view-blob {
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        135deg, 
+        hsl(38, 99%, 61%), 
+        hsl(21, 74%, 51%)
+    );
+    justify-content: center;
+}
+
+.hero-view-haze {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/grain.svg");
+    z-index: 1000;
+}
+
+.hero-view-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.hero-view-tag1 {
+    display: none;
+    inset: auto auto 20px 0;
+}
+
+.hero-view-tag2 {
+    display: none;
+    inset: 20px 0 auto auto;
+}
+
+.hero-info {
+    margin-bottom: var(--sp-xl);
+}
+
+.hero-info-link {
+    color: var(--type);
+    background-color: var(--brand);
+    font-weight: 500;
+}
+
+.hero-tape {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hero-tape-col1,
+.hero-tape-col2 {
+    min-width: 100%;
+    animation: tape 10000ms linear infinite;
+    justify-content: space-between;
+}
+
+.hero-tape-item {
+    width: 100%;
+}
+
+@keyframes tape {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 36em) {
+    .hero-view {
+        --size: 320px;
+    }
+}
+
+@media (min-width: 62em) {
+    .hero {
+        padding-top: 2em;
+    }
+    .hero-wrap {
+        column-gap: 5em;
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+
+    .hero-view,
+    .hero-info {
+        width: max-content;
+        margin-bottom: 0;
+    }
+
+    .hero-view {
+        --size: 450px;
+    }
+}

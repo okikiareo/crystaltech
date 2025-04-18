@@ -1,0 +1,12 @@
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--type);
+    column-gap: 0.5em;
+}
+
+.logo-icon {
+    width: 24px;
+}
+

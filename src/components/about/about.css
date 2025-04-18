@@ -1,0 +1,24 @@
+.about {
+    background-color: var(--bgrd100);
+}
+
+.about-col1 {
+    margin-bottom: var(--sp-800);
+}
+
+.about-col1-link {
+    background-color: var(--bgrd);
+}
+
+@media (min-width: 62em) {
+    .about-wrap {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .about-col1,
+    .about-col2 {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,30 @@
+.testimonials-wrap {
+    overflow: hidden;
+}
+
+.testimonials-line {
+    font-weight: 600;
+    margin-bottom: var(--sp-300);
+    color: var(--brand);
+}
+
+.testimonials-list {
+    column-gap: 1em;
+    margin-bottom: var(--sp-700);
+}
+
+.testimonials-ctrl {
+    padding: 1em 0;
+    column-gap: 1em;
+    justify-content: center;
+}
+
+.testimonials-push {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0 0 0 2px var(--ring);
+    border-radius: 50%;
+}

@@ -1,0 +1,26 @@
+.contact {
+    background-color: var(--brand);
+    background-image: url("../../assets/images/blob.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contact-para {
+    color: var(--type);
+}
+
+.contact-link {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.contact-link-email {
+    color: var(--type);
+    background-color: var(--bgrd);
+}
+
+.contact-link-phone {
+    color: var(--type);
+    background-color: var(--bgrd);
+}

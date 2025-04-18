@@ -1,0 +1,28 @@
+.hint {
+    width: max-content;
+    position: absolute;
+    background-color: hsl(0 0% 50% / 0.2);
+    padding: 0.5em 1em;
+    backdrop-filter: blur(2px);
+    border-radius: 4px;
+    gap: 0 0.5em;
+    overflow: hidden;
+}
+
+.hint-icon {
+    --primary: ;
+    --feature: ;
+
+    width: 32px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 1.5px var(--ring);
+    border-radius: 50%;
+    justify-content: center;
+    fill: var();
+    background-color: var(--bgrd);
+}
+
+.hint-text {
+    color: var(--type);
+    font-size: var(--fs-sm);
+}
