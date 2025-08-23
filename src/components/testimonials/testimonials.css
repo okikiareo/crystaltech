@@ -5,12 +5,7 @@
 .testimonials-line {
     font-weight: 600;
     margin-bottom: var(--sp-300);
-    color: var(--brand);
-}
-
-.testimonials-list {
-    column-gap: 1em;
-    margin-bottom: var(--sp-700);
+    color: var(--);
 }
 
 .testimonials-ctrl {
@@ -25,6 +20,8 @@
     height: var(--size);
     cursor: pointer;
     justify-content: center;
-    box-shadow: 0 0 0 2px var(--ring);
+    box-shadow: 0 0 0 2px var(--);
     border-radius: 50%;
 }
+
+@media (min-width: 48em) {}

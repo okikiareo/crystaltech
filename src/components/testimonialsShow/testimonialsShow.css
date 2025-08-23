@@ -1,0 +1,5 @@
+.testimonials-show-wrap {
+    column-gap: 1em;
+    align-items: stretch;
+    margin-bottom: var(--sp-700);
+}

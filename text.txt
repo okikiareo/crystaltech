@@ -1,93 +1,97 @@
---feature1-light: hsl(269, 86%, 56%);
---feature2-light: hsl(359, 86%, 56%);
---feature3-light: hsl(209, 86%, 56%);
---feature4-light: hsl(330, 86%, 56%);
+--type100-hover: var(--type100-night-hover);
+--type200-hover: var(--type200-night-hover);
 
---opacity1-light: hsl(269, 100%, 85%);
---opacity2-light: hsl(359, 100%, 85%);
---opacity3-light: hsl(209, 100%, 85%);
---opacity4-light: hsl(330, 100%, 85%);
+--bgrd100-hover: var(--bgrd100-night-hover);
+--bgrd200-hover: var(--bgrd200-night-hover);
 
---feature1: var(--feature1-light);
---feature2: var(--feature2-light);
---feature3: var(--feature3-light);
---feature4: var(--feature4-light);
-
---opacity1: var(--opacity1-light);
---opacity2: var(--opacity2-light);
---opacity3: var(--opacity3-light);
---opacity4: var(--opacity4-light);
+--ring100-hover: var(--ring100-night-hover);
+--ring200-hover: var(--ring200-night-hover);
 
 
-// Chat GPT
---primary1-night: hsl(var(--brand-h) 18% 90%);   /* High contrast / Main text */
---primary2-night: hsl(var(--brand-h) 22% 75%);   /* Body text */
---primary3-night: hsl(var(--brand-h) 18% 55%);   /* Secondary/muted */
---primary4-night: hsl(var(--brand-h) 10% 35%);   /* Disabled/placeholder */
-
---surface1-night: hsl(var(--brand-h) 12% 8%);    /* Main background */
---surface2-night: hsl(var(--brand-h) 10% 4%);    /* Deep background */
---surface3-night: hsl(var(--brand-h) 12% 14%);   /* Cards, elevated areas */
---surface4-night: hsl(var(--brand-h) 10% 20%);   /* Modals, hover, border contrast */
-
---outline1-night: hsl(var(--brand-h) 30% 75% / 0.15); /* Subtle but visible */
-
-
-// DeepSeek
---primary3-light: hsl(var(--brand-h) 19% 38%);  /* More contrast */
---primary4-light: hsl(var(--brand-h) 5% 20%); /* Subtly tinted gray */
-
---outline1-light: hsl(var(--brand-h) 15% 30% / 0.12);  /* Hint of brand hue */
-
---primary3-night: hsl(var(--brand-h) 20% 75%);  /* Lightened to match */
---primary4-night: hsl(var(--brand-h) 5% 90%); /* Matching warm/cool tone */
-
---surface1-night: hsl(var(--brand-h) 8% 6%);    /* Darker base */
---surface2-night: hsl(var(--brand-h) 10% 10%);  
---surface3-night: hsl(var(--brand-h) 12% 16%);  
---surface4-night: hsl(var(--brand-h) 15% 22%);  /* Smoother step-up */
-
---outline1-night: hsl(var(--brand-h) 10% 85% / 0.15);  /* Softer glow */
-
-
-// My system - type / bgrd / ring / mute
---type1-light: hsl(var(--brand-h) 17% 14%);
---type2-light: hsl(var(--brand-h) 25% 27%);
---type3-light: hsl(var(--brand-h) 19% 38%);
---type4-light: hsl(var(--brand-h) 5% 20%);
-
---bgrd1-light: hsl(var(--brand-h) 11% 97%);
---bgrd2-light: hsl(var(--brand-h) 0% 100%);
---bgrd3-light: hsl(var(--brand-h) 33% 96%);
---bgrd4-light: hsl(var(--brand-h) 76% 98%);
-    
---ring1-light: hsl(var(--brand-h) 10% 50% / 0.08);
---ring2-light: hsl(var(--brand-h) 15% 30% / 0.12);
---ring3-light: hsl(var(--brand-h) 80% 30% / 0.30);
-
---ring1-night: hsl(var(--brand-h) 10% 50% / 0.10);
---ring2-night: hsl(var(--brand-h) 10% 85% / 0.15);
---ring3-night: hsl(var(--brand-h) 80% 70% / 0.30);
-
-
-
-
---typeA10-hover: var(--typeA10-light-hover);
 --type100-hover: var(--type100-light-hover);
+--type200-hover: var(--type200-light-hover);
 
---bgrdA10-hover: var(--bgrdA10-light-hover);
 --bgrd100-hover: var(--bgrd100-light-hover);
+--bgrd200-hover: var(--bgrd200-light-hover);
 
 --ring100-hover: var(--ring100-light-hover);
 --ring200-hover: var(--ring200-light-hover);
 
 
+const events = [
+    {
+        title: "Sponsored NASS OAU Fresher’s Night",
+        description: "Backing future scientist from day one.",
+        link: "https://www.instagram.com/p/C72Eu2AsVrW/?igsh=MWQxc2QwcWtiYnZoMw==",
+        images: [],
+        createdAt: 1744502400000 // April 13, 2025
+    },
+    {
+        title: "Sponsored 2025 GEOPHYSICA OAU Fresher’s Night",
+        description: "Igniting the student spirit through celebration.",
+        link: "",
+        images: [],
+        createdAt: 1738464000000 // February 2, 2025
+    },
+    {
+        title: "Won Brand of the Year Award, PEPSA OAU",
+        description: "Recognized for excellence and innovation.",
+        link: "",
+        images: [],
+        createdAt: 1723420800000 // August 12, 2024
+    },
+    {
+        title: "Sponsor MHI Feminine Conference",
+        description: "Promoting Menstral Health Innitiative for young women",
+        link: "https://www.instagram.com/p/DI4JA4bMf6u/?img_index=4&igsh=cmU0MTA5ZWd6aG1m",
+        images: [],
+        createdAt: 1717804800000 // June 8, 2024
+    },
+    {
+        title: "Sponsored PEPSA Dinner Night",
+        description: "Proudly supporting student FYB excellence.",
+        link: "",
+        images: [],
+        createdAt: 1723420800000 // August 12, 2024
+    },
+    {
+        title: "Laptop Health Guide",
+        description: "Smart tips to keep your laptop running like new.",
+        link: "https://www.instagram.com/p/C06PkURMHEp/?igsh=c2kzc2d5NDRza21r",
+        images: [],
+        createdAt: 1685577600000 // June 1, 2023 (approximate)
+    }
+];
 
---typeA10-hover: var(--typeA10-night-hover);
---type100-hover: var(--type100-night-hover);
 
---bgrdA10-hover: var(--bgrdA10-night-hover);
---bgrd100-hover: var(--bgrd100-night-hover);
+--p100-light: hsl(29, 86%, 56%);
+--p200-light: hsl(29, 100%, 85%);
+--s100-light: hsl(220, 60%, 55%);
+--f100-light: hsl(145, 45%, 45%);
+--b100-light: hsl(0, 0%, 100%);
+--r100-light: hsl(0, 0%, 98%);
+--t100-light: hsl(0, 0%, 15%);
+--t200-light: hsl(0, 0%, 100%);
 
---ring100-hover: var(--ring100-night-hover);
---ring200-hover: var(--ring200-night-hover);
+--p100-night: hsl(29, 86%, 56%);
+--p200-night: hsl(29, 90%, 45%);
+--s100-night: hsl(210, 30%, 70%);
+--f100-night: hsl(145, 30%, 60%);
+--b100-night: hsl(220, 15%, 10%);
+--r100-night: hsl(220, 15%, 15%);
+--t100-night: hsl(0, 0%, 90%);
+--t200-night: hsl(0, 0%, 100%);
+
+
+
+Empowerment
+We provide hands-on workshops in coding, design, content creation, AI, and hardware, equipping individuals with practical skills they can apply immediately. Our goal is to foster self-confidence and independence through immersive, real-world learning experiences.
+
+Collaboration
+By partnering with schools, NGOs, businesses, and startups, we create meaningful initiatives that extend our impact. These strategic alliances enable us to combine resources, knowledge, and networks to better serve our community and reach more people.
+
+Guidance
+Our mentorship programs support students and early-stage entrepreneurs by offering personalized advice, encouragement, and industry insights. This dedicated guidance helps mentees navigate challenges, build confidence, and accelerate their personal and professional growth.
+
+Inclusion
+We are committed to bridging the digital divide by delivering technology opportunities to underserved youth and individuals. Through accessible education and resources, we strive to create an inclusive environment where everyone can thrive in the digital age.

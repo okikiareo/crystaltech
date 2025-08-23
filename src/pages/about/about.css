@@ -1,0 +1,231 @@
+.About {
+    overflow: hidden;
+}
+
+/*  */
+.About-row1 {
+    padding: 5em 0;
+    background-image: url("/images/texture.png");
+    background-color: #1E4854;
+    background-color: #115E59;
+    background-color: #161616;
+}
+
+.About-row1-lead,
+.About-row1-para {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.About-row1-lead {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.About-row1-rays {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25px, -15px);
+    filter: brightness(0) invert(1);
+}
+
+/*  */
+.About-row2-wrap {
+    align-items: start;
+    flex-direction: column;
+}
+
+.About-row2-col1 {
+    margin-bottom: var(--sp-700);
+}
+
+.About-row2-col2 {
+    width: 100%;
+}
+
+.About-row2-col2-icon {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: var(--sp-900);
+}
+
+.About-row2-col2-view {
+    width: 300px;
+}
+
+/* .About-row2-col2-list {} */
+
+.About-row2-item {
+    padding: 1em 0;
+    /* border-top: 1px solid; */
+    column-gap: 1em;
+    align-items: start;
+    position: relative;
+}
+
+.About-row2-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1000px;
+    right: 0;
+    transform: translateY(-1em);
+    border-top: 1px solid;
+}
+
+.About-row2-item-icon {
+    width: 32px;
+    min-width: 32px;
+    margin-bottom: var(--sp-700);
+}
+
+.About-row2-item-lead {
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+}
+
+.About-row2-item-text {
+    margin-bottom: 0;
+}
+
+/*  */
+.About-row3 {
+    background-color: var(--bkgd2);
+}
+
+.About-row3-wrap {
+    align-items: start;
+    flex-direction: column;
+}
+
+.About-row3-col1 {
+    margin-bottom: var(--sp-700);
+}
+
+.About-row3-col2 {
+    display: grid;
+    gap: 2em;
+}
+
+.About-row3-card {
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.About-row3-card:nth-child(1) {
+    --bg: var(--purple-500);
+    --cl: var(--purple-100);
+    background-color: var(--bg);
+}
+.About-row3-card:nth-child(2) {
+    --bg: var(--orange-500);
+    --cl: var(--orange-100);
+    background-color: var(--bg);
+}
+.About-row3-card:nth-child(3) {
+    --bg: var(--cobalt-500);
+    --cl: var(--cobalt-100);
+    background-color: var(--bg);
+}
+.About-row3-card:nth-child(4) {
+    --bg: var(--yellow-500);
+    --cl: var(--yellow-100);
+    background-color: var(--bg);
+}
+
+.About-row3-card-icon {
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: var(--sp-400);
+}
+
+.About-row3-card-view {
+    width: 100%;
+}
+
+.About-row3-card-lead,
+.About-row3-card-text {
+    color: var(--cl);
+}
+
+.About-row3-card-lead {
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+}
+.About-row3-card-text {
+    margin-bottom: 0;
+}
+
+@media (min-width: 36em) {
+    .About-row2-col2 {
+        display: flex;
+    }
+    
+    .About-row2-col2-icon {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .About-row2-col2-view {
+        width: 300px;
+    }
+
+    .About-row2-col2-icon,
+    .About-row2-col2-list {
+        flex: 1;
+    }
+    
+    .About-row2-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .About-row3-col2 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "item1 item4 item3"
+        "item2 item2 item2";
+        gap: 2em 1em;
+    }
+
+    .About-row3-card:nth-child(1) {
+        grid-area: item1;
+    }
+    .About-row3-card:nth-child(2) {
+        grid-area: item2;
+        padding: 1em 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .About-row3-card:nth-child(3) {
+        grid-area: item3;
+    }
+    .About-row3-card:nth-child(4) {
+        grid-area: item4;
+    }
+    
+    .About-row3-card-icon {
+        width: 300px;
+    }
+
+    .About-row3-card:nth-child(2) > 
+    .About-row3-card-icon {
+        /* width: 250px; */
+        order: 2;
+        margin: 0;
+        margin-bottom: 0;
+    }
+
+    .About-row3-card:nth-child(2) > 
+    .About-row3-card-info {
+        text-align: left;
+        order: 1;
+        max-width: 500px;
+    }
+}

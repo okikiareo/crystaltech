@@ -1,0 +1,13 @@
+.services-card-item {
+    font-size: var(--fs-300);
+    font-weight: 500;
+    column-gap: 1em;
+}
+
+.services-card-icon > rect {
+    stroke: var(--services-cl-icon);
+}
+
+.services-card-icon > path {
+    fill: var(--services-cl-icon);
+}

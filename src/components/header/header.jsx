@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useStore, useStyle } from "../../hooks";
 import { Flyout, Logo, WelcomeSvg } from "../";
-import { ACTIONS } from "../../store";
+import { ACTIONS } from "../../utils/constants";
 import "./header.css";
 
 const Header = () => {
@@ -49,6 +49,7 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "header-list-link" : "header-list-link"}
                                 to="/"
+                                onClick={() => { state.menu && dispatch({ type: ACTIONS.TOGGLE_MENU }) }}
                             >
                                 Home
                             </NavLink>
@@ -57,6 +58,7 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "header-list-link" : "header-list-link"}
                                 to="/about"
+                                onClick={() => { state.menu && dispatch({ type: ACTIONS.TOGGLE_MENU }) }}
                             >
                                 About
                             </NavLink>
@@ -65,6 +67,7 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "header-list-link" : "header-list-link"}
                                 to="/blog"
+                                onClick={() => { state.menu && dispatch({ type: ACTIONS.TOGGLE_MENU }) }}
                             >
                                 Blog
                             </NavLink>

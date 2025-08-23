@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ServicesCard } from "../";
 import "./services.css";
 
@@ -6,28 +7,29 @@ const services = [
         id: "yLD41esiEy2PccpuHZ7g6",
         title: "Design",
         group: ["UIUX", "Motion Graphics", "Visual Illustration"],
-        desc: "We bring ideas to life by building market-ready digital products. From apps to websites, we ensure quality, performance, and innovation."
+        descr: "We bring ideas to life by building market-ready digital products. From apps to websites, we ensure quality, performance, and innovation."
     },
     {
         id: "arxDSa4BFgQWvZaKPblF6",
         title: "Design",
         group: ["UIUX", "Motion Graphics", "Visual Illustration"],
-        desc: "We craft visually stunning and user-friendly designs that enhance brand identity and create seamless digital experiences."
+        descr: "We craft visually stunning and user-friendly designs that enhance brand identity and create seamless digital experiences."
     },
     {
         id: "rOXC68WtWRJTnYLhXg7UL",
         title: "Design",
         group: ["UIUX", "Motion Graphics", "Visual Illustration"],
-        desc: "For businesses and individuals looking to optimize tech strategies, streamline operations, and maintain efficient IT systems."
+        descr: "For businesses and individuals looking to optimize tech strategies, streamline operations, and maintain efficient IT systems."
     },
     {
         id: "ddRKF18pawM9WIpAZWRLw",
         title: "Design",
         group: ["UIUX", "Motion Graphics", "Visual Illustration"],
-        desc: "We offer high-quality tech products—laptops, smartphones, accessories—and provide expert repair services for hardware and software issues, ensuring your devices run at their best."
+        descr: "We offer high-quality tech products, laptops, smartphones, accessories and provide expert repair services for hardware and software issues, ensuring your devices run at their best."
     }
 ];
 const Services = () => {
+    const [service, setService] = useState(null);
     return (
         <section className="services">
             <div className="services-wrap wrap">
@@ -45,8 +47,7 @@ const Services = () => {
                     {services.map((service, index) => (
                         <ServicesCard
                             key={service.id}
-                            index={`${index + 1}`
-                            .padStart(2, "0")}
+                            index={`${index + 1}`.padStart(2, "0")}
                             {...service}
                         />
                     ))}

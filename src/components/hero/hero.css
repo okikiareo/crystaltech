@@ -1,8 +1,15 @@
+.hero {
+    background-color: var(--color-bkgd-200);
+    padding-bottom: 0;
+}
+
 .hero-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: var(--sp-800);
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .hero-view {
@@ -18,11 +25,9 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    background-image: linear-gradient(
-        135deg, 
-        hsl(38, 99%, 61%), 
-        hsl(21, 74%, 51%)
-    );
+    background-image: linear-gradient(135deg,
+            hsl(38, 99%, 61%),
+            hsl(21, 74%, 51%));
     justify-content: center;
 }
 
@@ -33,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../assets/images/grain.svg");
+    background-image: url("/icons/grain.svg");
     z-index: 1000;
 }
 
@@ -60,9 +65,13 @@
     margin-bottom: var(--sp-xl);
 }
 
+.hero-info-lead {}
+
+.hero-info-para {}
+
 .hero-info-link {
-    color: var(--type);
-    background-color: var(--brand);
+    color: var(--color-type-400);
+    background-color: var(--color-primary-100);
     font-weight: 500;
 }
 
@@ -75,17 +84,30 @@
 .hero-tape-col2 {
     min-width: 100%;
     animation: tape 10000ms linear infinite;
-    justify-content: space-between;
+    white-space: nowrap;
 }
 
 .hero-tape-item {
     width: 100%;
+    height: 80px;
+    filter: brightness(0) invert(0.25);
+    border: 1px solid;
+    border-right: transparent;
 }
 
-@keyframes tape {
-    to {
-        transform: translateX(-100%);
-    }
+.hero-tape-item:nth-child(2) > img {
+    scale: 1.5;
+}
+
+.hero-tape-item:nth-child(3) > img {
+    scale: 2.2;
+}
+
+.hero-tape-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 @media (max-width: 36em) {
@@ -98,10 +120,11 @@
     .hero {
         padding-top: 2em;
     }
+
     .hero-wrap {
         column-gap: 5em;
         flex-direction: row-reverse;
-        justify-content: start;
+        justify-content: space-between;
     }
 
     .hero-view,
@@ -112,5 +135,9 @@
 
     .hero-view {
         --size: 450px;
+    }
+
+    .hero-info-text {
+        max-width: 450px;
     }
 }

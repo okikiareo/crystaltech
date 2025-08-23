@@ -1,33 +1,39 @@
 import { Link } from "react-router-dom";
-import { Icon } from "../";
-import { truncate } from "../../utils";
+import { RiArrowRightLine } from "react-icons/ri";
 import "./blogCard.css";
+import { formatDate } from "../../utils/functions";
 
 const BlogCard = (props) => {
     const {
+        id,
         title,
-        image,
+        description,
+        images,
         createdAt
     } = props;
 
     return (
         <div className="blog-card">
             <div className="blog-card-case">
-                <img className="blog-card-pics" src={image} alt={title} />
+                <img 
+                    className="blog-card-pics" 
+                    src={images[0]} 
+                    alt={title} 
+                />
             </div>
             <div className="blog-card-info">
                 <div className="blog-card-date">
-                    {createdAt}
+                    {formatDate(createdAt)}
                 </div>
                 <div className="blog-card-lead">
-                    {truncate({
-                        value: title,
-                        limit: 32
-                    })}
+                    {title}
                 </div>
-                <Link className="blog-card-link flex" to="">
+                <div className="blog-card-desc">
+                    {description}
+                </div>
+                <Link className="blog-card-link flex" to={`/blog/${id}`}>
                     Read More
-                    <Icon link="arrow-next" />
+                    <RiArrowRightLine />
                 </Link>
             </div>
         </div>

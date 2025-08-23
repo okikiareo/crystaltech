@@ -8,7 +8,7 @@ const Home = () => {
             <Hero />
             <About />
             <Services />
-            <Blog blog={data.blog} />
+            <Blog posts={data.posts} />
             <Testimonials testimonials={data.testimonials} />
             <Contact />
         </>

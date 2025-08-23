@@ -1,7 +1,7 @@
 import { useStore } from ".";
 import { useLayoutEffect } from "react";
 import { Cache } from "../logic";
-import { ACTIONS } from "../store";
+import { ACTIONS } from "../utils/constants";
 
 export const useTheme = () => {
     const { dispatch } = useStore();

@@ -1,27 +1,28 @@
-import { useStore } from "../../hooks";
-import { ACTIONS } from "../../store";
+import { ServicesItem } from "..";
 import "./servicesCard.css";
+import { motion } from "motion/react";
 
 const ServicesCard = (props) => {
-    const { state, dispatch } = useStore();
-    const { id, index, title, group, desc } = props;
-
-    const spans = group.map((item, indx) => (
-        <li className="services-card-item flex" key={indx}>
-            <span className="services-card-tick">✔</span>
-            {item}
-        </li>
+    const { 
+        index, 
+        title, 
+        group, 
+        descr,
+    } = props;
+    const items = group.map((item, indx) => (
+        <ServicesItem 
+            key={indx} 
+            item={item} 
+        />
     ));
 
     return (
-        <button
-            id={id}
+        <motion.button 
             className="services-card flex"
-            data-collapsed={id === state.hash && true}
-            onPointerEnter={(e) => dispatch({
-                type: ACTIONS.TOGGLE_LIST,
-                payload: { event: e }
-            })}>
+            initial="hide"
+            whileHover="show"
+            onClick={() => null}
+        >
             <div className="services-card-step">
                 {index}
             </div>
@@ -30,13 +31,20 @@ const ServicesCard = (props) => {
                     {title}
                 </h3>
                 <ul className="services-card-list">
-                    {spans}
+                    {items}
                 </ul>
-                <p className="services-card-desc">
-                    {desc}
-                </p>
+                <motion.p 
+                    className="services-card-desc"
+                    // animate={null}
+                    variants={{
+                        hide: { height: 0 },
+                        show: { height: "auto" }
+                    }}
+                >
+                    {descr}
+                </motion.p>
             </div>
-        </button>
+        </motion.button>
     );
 }
 

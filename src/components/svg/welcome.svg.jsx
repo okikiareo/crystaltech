@@ -1,5 +1,3 @@
-import "./svg.css";
-
 const WelcomeSvg = (props) => {
     return (
         <svg

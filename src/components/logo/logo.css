@@ -1,6 +1,6 @@
 .logo {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: var(--fs-500);
+    /* font-weight: 600; */
     text-transform: uppercase;
     color: var(--type);
     column-gap: 0.5em;

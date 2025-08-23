@@ -18,8 +18,8 @@
     box-shadow: 0 0 0 1.5px var(--ring);
     border-radius: 50%;
     justify-content: center;
-    fill: var();
-    background-color: var(--bgrd);
+    /* fill: var(); */
+    background-color: var(--bkgd);
 }
 
 .hint-text {

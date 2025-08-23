@@ -1,44 +1,44 @@
 .blog-card {
     padding: 0.75em;
     display: flex;
-    column-gap: 1em;
-    height: 160px;
+    flex-direction: column;
     overflow: hidden;
-    border-radius: 5px;
-    margin-bottom: var(--sp-600);
-    background-color: var(--bgrd100);
+    border-radius: 8px;
+    margin-bottom: var(--sp-700);
+    background-color: var(--);
 }
 
 .blog-card-case {
-    flex: 2;
+    width: 100%;
+    height: 250px;
     overflow: hidden;
     border-radius: 5px;
+    margin-bottom: var(--sp-600);
 }
 
 .blog-card-pics {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top left;
 }
 
 .blog-card-info {
-    flex: 3;
     padding-inline: 0.5em;
 }
 
 .blog-card-lead {
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: var(--sp-400);
-    color: var(--type);
+    font-family: var(--ff-head);
+    margin-bottom: var(--sp-300);
+    color: var(--);
+}
+
+.blog-card-desc {
+    margin-bottom: var(--sp-500);
 }
 
 .blog-card-date {
-    color: var(--type);
-    font-size: var(--fs-300);
     margin-bottom: var(--sp-200);
-    font-weight: 500;
-    text-transform: uppercase;
 }
 
 .blog-card-link {
@@ -46,28 +46,45 @@
     margin-bottom: var(--sp-300);
 }
 
+
 @media (min-width: 62em) {
     .blog-card {
-        height: auto;
         margin-bottom: 0;
     }
-    .blog-card:nth-child(0n + 1) {
+
+    .blog-card:nth-child(1) {
         grid-row: 1 / 3;
         grid-column: 1 / 2;
-        flex-direction: column;
-        justify-content: space-between;
+        row-gap: 1em;
     }
     
-    .blog-card:nth-child(1n + 2) {
+    .blog-card:nth-child(2),
+    .blog-card:nth-child(3) {
         grid-column: 2 / 3;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 1em;
     }
 
-    .blog-card-case,
-    .blog-card-info {
-        flex: initial;
+    .blog-card:nth-child(1) > .blog-card-case {
+        margin-bottom: 0;
     }
 
-    .blog-card-case {
-        margin-bottom: var(--sp-300);
+    .blog-card:nth-child(1) > .blog-card-info {
+        height: max-content;
+    }
+
+    .blog-card:nth-child(2) > .blog-card-case,
+    .blog-card:nth-child(3) > .blog-card-case {
+        flex: 1;
+        height: 180px;
+        /* height: auto; */
+        margin-bottom: 0;
+    }
+
+    .blog-card:nth-child(2) > .blog-card-info,
+    .blog-card:nth-child(3) > .blog-card-info {
+        flex: 2;
+        padding: 0;
     }
 }

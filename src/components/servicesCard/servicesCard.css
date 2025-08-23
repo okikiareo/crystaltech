@@ -1,6 +1,4 @@
 .services-card {
-    --type: var(--type);
-    --bgrd: var(--bgrd100);
     width: 100%;
     column-gap: 1em;
     align-items: start;
@@ -8,8 +6,11 @@
     padding: 1.5em 1em;
     cursor: pointer;
     text-align: left;
-    background-color: var(--bgrd);
     border-radius: 10px;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
 }
 
 .services-card:last-child {
@@ -17,18 +18,18 @@
 }
 
 .services-card-step {
-    color: var(--type);
+    color: var(--);
     font-size: var(--fs-500);
 }
 
 .services-card-info {
     width: 85%;
-    color: var(--type);
+    color: var(--);
     max-width: 650px;
 }
 
 .services-card-lead {
-    color: var(--type);
+    color: var(--);
 }
 
 .services-card-list {
@@ -36,29 +37,44 @@
     column-gap: 1.5em;
 }
 
-.services-card-item {
-    font-size: var(--fs-300);
-    align-items: start;
-    column-gap: 1em;
-    font-weight: 500;
+.services-card:nth-child(1) {
+    --services-cl-base: var(--);
+    --services-cl-icon: var(--);
+    color: var(--services-cl-icon);
+    background-color: var(--services-cl-base);
+}
+
+.services-card:nth-child(2) {
+    --services-cl-base: var(--);
+    --services-cl-icon: var(--);
+    color: var(--services-cl-icon);
+    background-color: var(--services-cl-base);
+}
+
+.services-card:nth-child(3) {
+    --services-cl-base: var(--);
+    --services-cl-icon: var(--);
+    color: var(--services-cl-icon);
+    background-color: var(--services-cl-base);
+}
+
+.services-card:nth-child(4) {
+    --services-cl-base: var(--);
+    --services-cl-icon: var(--);
+    color: var(--services-cl-icon);
+    background-color: var(--services-cl-base);
+}
+
+.services-card-icon > path {
+    fill: var(--);
 }
 
 .services-card-desc {
-    color: var(--type);
-    margin-top: var(--sp-300);
+    color: var(--);
+    margin-top: var(--sp-400);
     margin-bottom: 0;
-    display: none;
-}
-
-[data-collapsed="true"] {
-    --type: var(--type5);
-    --bgrd: var(--brand);
-    border-bottom: none;
-}
-
-[data-collapsed="true"] 
-.services-card-desc {
-    display: flex;
+    height: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 36em) {

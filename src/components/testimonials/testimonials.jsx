@@ -1,19 +1,24 @@
-import { useEffect, useRef } from "react";
-import { Icon, TestimonialsCard } from "../";
-import { useStore } from "../../hooks";
-import { ACTIONS } from "../../store";
-// import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
+import { TestimonialsShow } from "../";
+import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 import "./testimonials.css";
 
 const Testimonials = (props) => {
-    const { state, dispatch } = useStore();
-    const sliderRef = useRef();
-    const testimonials = props.testimonials;
-    const leadTestimonial = testimonials[0];
-    const tailTestimonial = testimonials[testimonials.length - 1];
+    const [count, setCount] = useState(0);
+    const testimonialSlides = props.testimonials;
 
+    function handleCount(prop) {
+        if (prop === "prev") {
+            if (count <= 0) { return };
+            setCount(c => c - 1);
+        } else {
+            let x = testimonialSlides.length + 1;
+            if (count >=  x) { return };
+            setCount(c => c + 1);
+        }
+    }
     return (
-        <section className="testimonials">
+        <section className="testimonial">
             <div className="testimonials-wrap wrap">
                 <div className="testimonials-line">
                     TRUSTED BY MANY, DRIVEN BY RESULTS
@@ -23,43 +28,25 @@ const Testimonials = (props) => {
                     WHAT THEY SAY
                 </h2>
                 <p className="testimonials-para">
-                    Great service isn’t just a promise—it’s
+                    Great service isn’t just a promise - it’s
                     our standard. Many clients, smooth
                     experiences, and guaranteed satisfaction.
                 </p>
-                <div
-                    className="testimonials-list flex"
-                    ref={sliderRef}
-                    style={{ transform: `translateX(${state.move})` }}
-                    onTransitionEnd={(e) => dispatch({
-                        type: ACTIONS.SLIDER_DONE,
-                        payload: { event: e }
-                    })}>
-                    <TestimonialsCard {...tailTestimonial} />
-                    {testimonials.map(testimonial => (
-                        <TestimonialsCard
-                            key={testimonial.id}
-                            {...testimonial}
-                        />
-                    ))}
-                    <TestimonialsCard {...leadTestimonial} />
-                </div>
+                <TestimonialsShow 
+                    sliderSlide={testimonialSlides}
+                    sliderCount={count}
+                    updateCount={setCount}
+                />
                 <div className="testimonials-ctrl flex">
                     <button
-                        className="testimonials-push prev flex"
-                        onClick={(e) => dispatch({
-                            type: ACTIONS.SLIDER_PUSH,
-                            payload: { event: e, slave: sliderRef.current }
-                        })}>
-                        <Icon link="arrow-prev" />
+                        className="testimonials-push flex"
+                        onClick={() => handleCount("prev")}>
+                        <RiArrowLeftLine />
                     </button>
                     <button
-                        className="testimonials-push next flex"
-                        onClick={(e) => dispatch({
-                            type: ACTIONS.SLIDER_PUSH,
-                            payload: { event: e, slave: sliderRef.current }
-                        })}>
-                        <Icon link="arrow-next" />
+                        className="testimonials-push flex"
+                        onClick={() => handleCount("next")}>
+                        <RiArrowRightLine />
                     </button>
                 </div>
             </div>

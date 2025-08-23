@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Peep } from "../../assets";
 import { HeroLabel } from "..";
 import "./hero.css";
 
@@ -10,16 +9,19 @@ const Hero = () => {
                 <div className="hero-view">
                     <div className="hero-view-blob flex">
                         <div className="hero-view-haze"></div>
-                        <img className="hero-view-item" src={Peep} alt="peep" />
+                        <img className="hero-view-item"
+                            src="/images/peep.png"
+                            alt="peep"
+                        />
                     </div>
                     <HeroLabel
                         text="Smart Solution"
-                        icon="flash"
+                        icon={null}
                         name="hero-view-tag1"
                     />
                     <HeroLabel
                         text="Smart Solution"
-                        icon="shake"
+                        icon={null}
                         name="hero-view-tag2"
                     />
                 </div>
@@ -29,60 +31,50 @@ const Hero = () => {
                     </h1>
                     <p className="hero-info-text">
                         Harness the power of Tech to simplify & enhance
-                        your experience—from dynamic digital solutions
+                        your experience from dynamic digital solutions
                         to efficient repairs and high-quality gadgets.
                     </p>
-                    <Link className="hero-info-link btn" to="">
+                    <Link className="hero-info-link btn" to="/about">
                         Learn More
                     </Link>
                 </div>
             </div>
             <div className="hero-tape flex">
-                    <ul className="hero-tape-col1 flex">
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 1
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 2
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 3
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 4
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 5
-                        </li>
-                    </ul>
-                    <ul className="hero-tape-col2 flex">
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 1
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 2
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 3
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 4
-                        </li>
-                        <li className="hero-tape-item">
-                            <img src="" alt="" />
-                            Image 5
-                        </li>
-                    </ul>
-                </div>
+                <ul className="hero-tape-col1 flex">
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-1.png" alt="" />
+                    </li>
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-2.png" alt="" />
+                    </li>
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-3.png" alt="" />
+                    </li>
+                    {/* <li className="hero-tape-item">
+                        <img src="/images/sponsor-4.png" alt="" />
+                    </li> */}
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-5.png" alt="" />
+                    </li>
+                </ul>
+                <ul className="hero-tape-col2 flex">
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-1.png" alt="" />
+                    </li>
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-2.png" alt="" />
+                    </li>
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-3.png" alt="" />
+                    </li>
+                    {/* <li className="hero-tape-item">
+                        <img src="/images/sponsor-4.png" alt="" />
+                    </li> */}
+                    <li className="hero-tape-item">
+                        <img className="hero-tape-logo" src="/images/sponsor-5.png" alt="" />
+                    </li>
+                </ul>
+            </div>
         </section>
     );
 }

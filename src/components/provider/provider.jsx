@@ -1,5 +1,6 @@
 import { useReducer } from "react";
-import { initial, reducer, StoreContext } from "../../store";
+import { initial, reducer } from "../../store";
+import { StoreContext } from "../../scope";
 
 const StoreProvider = (props) => {
     const { children } = props;

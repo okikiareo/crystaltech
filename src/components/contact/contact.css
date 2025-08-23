@@ -1,13 +1,21 @@
 .contact {
-    background-color: var(--brand);
-    background-image: url("../../assets/images/blob.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-color: var(--);
+    background-image:
+    radial-gradient(at 79% 15%, hsla(37, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 26% 63%, hsla(20, 73%, 50%, 1) 0px, transparent 50%);
+    /* background-image: url("/icons/mesh-gradient.svg"); */
+}
+
+.contact-wrap {
+    align-items: start;
+    flex-direction: column-reverse;
 }
 
 .contact-para {
-    color: var(--type);
+    color: var(--);
 }
 
 .contact-link {
@@ -16,11 +24,33 @@
 }
 
 .contact-link-email {
-    color: var(--type);
-    background-color: var(--bgrd);
+    color: #ffffff;
+    background-color: #020c16;
 }
 
 .contact-link-phone {
-    color: var(--type);
-    background-color: var(--bgrd);
+    color: #ffffff;
+    background-color: #1178D9;
+}
+
+.contact-link-phone {
+    color: var(--brand);
+    background-color: #ffffff;
+}
+
+.contact-icon {
+    width: 300px;
+    align-self: center;
+}
+
+
+@media (min-width: 62em) {
+    .contact-wrap {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .contact-icon {
+        width: auto;
+    }
 }

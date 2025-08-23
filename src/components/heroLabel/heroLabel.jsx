@@ -1,4 +1,3 @@
-import { Icon } from "..";
 import "./heroLabel.css";
 
 const HeroLabel = (props) => {
@@ -6,7 +5,7 @@ const HeroLabel = (props) => {
     return (
         <div className={`hint flex ${name}`}>
             <div className="hint-icon flex">
-                <Icon link={icon} />
+                {/* Icon goes here */}
             </div>
             <div className="hint-text">
                 {text}

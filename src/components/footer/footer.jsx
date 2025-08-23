@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Icon, Logo } from "../";
+import { Logo } from "../";
+import { RiFacebookLine, RiLinkedinLine, RiInstagramLine, RiTwitterXLine } from "react-icons/ri";
 import "./footer.css";
 
 const Footer = () => {
@@ -71,16 +72,16 @@ const Footer = () => {
                     </div>
                     <div className="footer-hubs flex">
                         <Link className="footer-hubs-link flex" to="">
-                            <Icon link="facebook" />
+                            <RiInstagramLine />
                         </Link>
                         <Link className="footer-hubs-link flex" to="">
-                            <Icon link="linkedin" />
+                            <RiFacebookLine />
                         </Link>
                         <Link className="footer-hubs-link flex" to="">
-                            <Icon link="instagram" />
+                            <RiLinkedinLine />
                         </Link>
                         <Link className="footer-hubs-link flex" to="">
-                            <Icon link="twitter" />
+                            <RiTwitterXLine />
                         </Link>
                     </div>
                 </div>

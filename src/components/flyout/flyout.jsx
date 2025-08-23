@@ -1,6 +1,6 @@
-import { Icon } from "../";
 import { useStore } from "../../hooks";
-import { ACTIONS } from "../../store";
+import { ACTIONS } from "../../utils/constants";
+import { RiContrastLine, RiSunLine, RiMoonLine, RiCheckLine } from "react-icons/ri";
 import "./flyout.css";
 
 const Flyout = () => {
@@ -11,8 +11,10 @@ const Flyout = () => {
             <div
                 className="flyout-menu"
                 onClick={() => dispatch({ type: ACTIONS.REVEAL_MORE })}>
-                <Icon link={mode} />
-                <Icon link="drop" />
+                {
+                    mode === "light" ? <RiSunLine /> :
+                    mode === "night" ? <RiMoonLine /> : <RiContrastLine />
+                }
             </div>
             <div
                 className={`flyout-list${state.more ? " open" : ""}`}>
@@ -20,28 +22,28 @@ const Flyout = () => {
                     className={`flyout-item flex${mode === "auto" ? " done" : ""}`}
                     onClick={() => dispatch({ type: ACTIONS.COMMIT_MODE, mode: "auto" })}>
                     <div className="flyout-info flex">
-                        <Icon link="auto" />
+                        <RiContrastLine />
                         <div>Auto</div>
                     </div>
-                    <Icon link="check" name="flyout-mark" />
+                    { mode === "auto" && <RiCheckLine /> }
                 </div>
                 <div
                     className={`flyout-item flex${mode === "light" ? " done" : ""}`}
                     onClick={() => dispatch({ type: ACTIONS.COMMIT_MODE, mode: "light" })}>
                     <div className="flyout-info flex">
-                        <Icon link="light" />
+                        <RiSunLine />
                         <div>Light</div>
                     </div>
-                    <Icon link="check" name="flyout-mark" />
+                    {mode === "light" && <RiCheckLine /> }
                 </div>
                 <div
                     className={`flyout-item flex${mode === "night" ? " done" : ""}`}
                     onClick={() => dispatch({ type: ACTIONS.COMMIT_MODE, mode: "night" })}>
                     <div className="flyout-info flex">
-                        <Icon link="night" />
+                        <RiMoonLine />
                         <div>Night</div>
                     </div>
-                    <Icon link="check" name="flyout-mark" />
+                    {mode === "night" && <RiCheckLine />}
                 </div>
             </div>
         </div>

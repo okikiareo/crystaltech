@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import { BlogCard } from "../";
 import "./blog.css";
 
-
 const Blog = (props) => {
-    const posts = props.blog;
+    const posts = props.posts;
     return (
         <section className="blog">
             <div className="blog-wrap wrap">

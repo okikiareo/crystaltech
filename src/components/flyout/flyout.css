@@ -3,14 +3,17 @@
 }
 
 .flyout-menu {
+    --size: 36px;
+    width: var(--size);
+    height: var(--size);
     padding: 0.25em 0.5em;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     cursor: pointer;
-    fill: var(--bgrdA10);
-    /* border-radius: 3px; */
-    /* box-shadow: 0 0 0 1px var(--ring100); */
+    fill: var(--);
+    /* box-shadow: 0 0 0 2px; */
+    border-radius: 50%;
 }
 
 .flyout-list {
@@ -21,17 +24,17 @@
     z-index: 2000;
     padding: 0.25em;
     border-radius: 5px;
-    background-color: var(--bgrd100);
-    box-shadow: 0 0 0 1px var(--ring100);
+    background-color: var(--);
+    box-shadow: 0 0 0 1px var(--);
     display: none;
 }
 
 .flyout-item {
-    --color: var(--type);
+    --color: var(--);
     --check: none;
     padding: 0.25em;
-    margin-bottom: var(--sp-xs);
-    border-radius: var(--sp-xs);
+    margin-bottom: var(--sp-200);
+    border-radius: var(--sp-200);
     justify-content: space-between;
     cursor: pointer;
     fill: var(--color);
@@ -52,7 +55,7 @@
 }
 
 .done.flyout-item {
-    --color: var(--type);
+    --color: ;
     --check: flex;
-    background-color: var(--bgrd);
+    background-color: var(--);
 }

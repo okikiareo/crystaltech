@@ -1,5 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+
+@font-face {
+    font-family: "GT Walsheim Pro";
+    font-weight: 700;
+    src: url("/fonts/GT-Walsheim-Pro-700.ttf");
+}
+
+@font-face {
+    font-family: "GT Walsheim Pro";
+    font-weight: 500;
+    src: url("/fonts/GT-Walsheim-Pro-500.ttf");
+}
+
+@font-face {
+    font-family: "GT Walsheim Pro";
+    font-weight: 400;
+    src: url("/fonts/GT-Walsheim-Pro-400.ttf");
+}
+
+@font-face {
+    font-family: "GT Walsheim Pro";
+    font-weight: 300;
+    src: url("/fonts/GT-Walsheim-Pro-300.ttf");
+}
+
 
 *,
 *::before,
@@ -9,76 +33,72 @@
     box-sizing: border-box;
 }
 
-.gray {
-    color: hsl(176, 69%, 22%);
-}
+:root {
+    /* === Light Theme === */
+    --color-primary-100-light: #EF8C2E;
+    --color-primary-200-light: #D9791C;
+    --color-primary-300-light: #C26F17;
 
-html {
-    /* Color Scheme */
-    --light: light;
-    --night: dark;
+    --color-popcorn-100-light: #FFB26B;
+    --color-popcorn-200-light: #FFD4A3;
 
-    /* Brand Schema */
-    --brand-h: 29; /* Hue */
-    --brand-s: 86%; /* Saturation */
-    --brand-l: 56%; /* Lightness */
+    --color-bkgd-100-light: #FFFFFF;
+    --color-bkgd-200-light: #F8F8F8;
+    --color-bkgd-300-light: #F0F0F0;
+    --color-bkgd-400-light: #1E1A16;
 
-    /* Light */
-    --brand-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+    --color-type-100-light: #1E1E1E;
+    --color-type-200-light: #555555;
+    --color-type-300-light: #888888;
+    --color-type-400-light: #FFFFFF;
+    --color-type-500-light: #381A0A;
 
-    --type100-light: hsl(var(--brand-h) 17% 10%);
-    --type200-light: hsl(var(--brand-h) 15% 25%);
-    --type300-light: hsl(var(--brand-h) 10% 50%);
+    --color-line-100-light: #E0E0E0;
+    --color-line-200-light: #CCCCCC;
 
-    --bgrdA10-light: hsl(var(--brand-h) 0% 30%);
-    --bgrd100-light: hsl(var(--brand-h) 0% 100%);
-    --bgrd200-light: hsl(var(--brand-h) 11% 97%);
+    --color-ring-100-light: hsla(29, 86%, 56%, 0.2);
+    --color-ring-200-light: hsla(29, 86%, 56%, 0.4);
 
-    --ring100-light: hsl(var(--brand-h) 15% 30% / 0.12);
+    --color-drop-100-light: rgba(239, 140, 46, 0.15);
+    --color-drop-200-light: rgba(239, 140, 46, 0.15);
 
-    --type100-light-hover: hsl(var(--brand-h) 0% 0%);
-    --type200-light-hover: hsl(var(--brand-h) 0% 0%);
+    /* === Night Theme === */
+    --color-primary-100-night: #EF8C2E;
+    --color-primary-200-night: #FF9D42;
+    --color-primary-300-night: #FFB366;
 
-    --bgrdA10-light-hover: hsl(var(--brand-h) 0% 0%);
-    --bgrd100-light-hover: hsl(var(--brand-h) 0% 0%);
-    --bgrd200-light-hover: hsl(var(--brand-h) 0% 0%);
+    --color-popcorn-100-night: #FFA64B;
+    --color-popcorn-200-night: #FFCD91;
 
-    --ring100-light-hover: hsl(var(--brand-h) 0% 0%);
-    --ring200-light-hover: hsl(var(--brand-h) 0% 0%);
+    --color-bkgd-100-night: #121212;
+    --color-bkgd-200-night: #1E1E1E;
+    --color-bkgd-300-night: #2A2A2A;
+    --color-bkgd-400-night: #F6F3EF;
 
-    /* color: hsl(var(--brand-h), 95%, 93%); */
-    /* color: hsl(var(--brand-h), 99%, 65%); */
+    --color-type-100-night: #F1F1F1;
+    --color-type-200-night: #BBBBBB;
+    --color-type-300-night: #888888;
+    --color-type-400-night: #FFFFFF;
+    --color-type-500-night: #F5A75A;
 
-    /* Night */
-    --brand-night: hsl(var(--brand-h) calc(var(--brand-s) / 0.8) calc(var(--brand-l) / 1.2));
+    --color-line-100-night: #333333;
+    --color-line-200-night: #444444;
 
-    --type100-night: hsl(var(--brand-h) 10% 90%);
-    --type200-night: hsl(var(--brand-h) 15% 80%);
-    --type300-night: hsl(var(--brand-h) 20% 75%);
+    --color-ring-100-night: hsla(29, 86%, 56%, 0.2);
+    --color-ring-200-night: hsla(29, 86%, 56%, 0.4);
 
-    --bgrd100-night: hsl(var(--brand-h) 8% 6%);
-    --bgrd200-night: hsl(var(--brand-h) 10% 10%);
-
-    --ring100-night: hsl(var(--brand-h) 10% 50%);
-
-    --typeA10-night-hover: hsl(var(--brand-h) 0% 0%);
-    --type100-night-hover: hsl(var(--brand-h) 0% 0%);
-
-    --bgrdA10-night-hover: hsl(var(--brand-h) 0% 0%);
-    --bgrd100-night-hover: hsl(var(--brand-h) 0% 0%);
-
-    --ring100-night-hover: hsl(var(--brand-h) 0% 0%);
-    --ring200-night-hover: hsl(var(--brand-h) 0% 0%);
+    --color-drop-100-night: rgba(239, 140, 46, 0.2);
+    --color-drop-200-night: rgba(239, 140, 46, 0.3);
 
     /*  */
-    --ff-body: "Noto Sans", sans-serif;
-    --ff-head: "Noto Serif", serif;
+    --ff-body: "GT Walsheim Pro", sans-serif;
+    --ff-head: "GT Walsheim Pro", serif;
 
-    --fs-700: 1.75rem;
-    --fs-600: 1.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
     --fs-500: 1.125rem;
     --fs-400: 1rem;
-    --fs-300: 0.875rem;
+    --fs-300: 0.9375rem;
     --fs-200: 0.625rem;
 
     --sp-900: 5rem;
@@ -90,89 +110,134 @@ html {
     --sp-300: 0.5rem;
     --sp-200: 0.25rem;
 
-    --header: 6rem;
+    --header: 5rem;
+
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        color-scheme: var(--light);
-        --brand: var(--brand-light);
-        --type100: var(--type100-light);
-        --type200: var(--type200-light);
-        --type300: var(--type300-light);
+        --color-primary-100: var(--color-primary-100-light);
+        --color-primary-200: var(--color-primary-200-light);
+        --color-primary-300: var(--color-primary-300-light);
 
-        --bgrdA10: var(--bgrdA10-light);
-        --bgrd100: var(--bgrd100-light);
-        --bgrd200: var(--bgrd200-light);
+        --color-popcorn-100: var(--color-popcorn-100-light);
+        --color-popcorn-200: var(--color-popcorn-200-light);
 
-        --ring100: var(--ring100-light);
+        --color-bkgd-100: var(--color-bkgd-100-light);
+        --color-bkgd-200: var(--color-bkgd-200-light);
+        --color-bkgd-300: var(--color-bkgd-300-light);
+        --color-bkgd-400: var(--color-bkgd-400-light);
 
-        --typeA10-hover: var(--typeA10-light-hover);
-        --type100-hover: var(--type100-light-hover);
+        --color-type-100: var(--color-type-100-light);
+        --color-type-200: var(--color-type-200-light);
+        --color-type-300: var(--color-type-300-light);
+        --color-type-400: var(--color-type-400-light);
+        --color-type-500: var(--color-type-500-light);
 
-        --bgrdA10-hover: var(--bgrdA10-light-hover);
-        --bgrd100-hover: var(--bgrd100-light-hover);
+        --color-line-100: var(--color-line-100-light);
+        --color-line-200: var(--color-line-200-light);
 
-        --ring100-hover: var(--ring100-light-hover);
-        --ring200-hover: var(--ring200-light-hover);
+        --color-ring-100: var(--color-ring-100-light);
+        --color-ring-200: var(--color-ring-200-light);
+
+        --color-drop-100: var(--color-drop-100-light);
+        --color-drop-200: var(--color-drop-200-light);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        color-scheme: var(--night);
-        --brand: var(--brand-night);
-        --type100: var(--type100-night);
-        --type200: var(--type200-night);
-        --type300: var(--type300-night);
+        --color-primary-100: var(--color-primary-100-night);
+        --color-primary-200: var(--color-primary-200-night);
+        --color-primary-300: var(--color-primary-300-night);
 
-        --bgrdA10: var(--bgrdA10-night);
-        --bgrd100: var(--bgrd100-night);
-        --bgrd200: var(--bgrd200-night);
+        --color-popcorn-100: var(--color-popcorn-100-night);
+        --color-popcorn-200: var(--color-popcorn-200-night);
 
-        --ring100: var(--ring100-night);
+        --color-bkgd-100: var(--color-bkgd-100-night);
+        --color-bkgd-200: var(--color-bkgd-200-night);
+        --color-bkgd-300: var(--color-bkgd-300-night);
+        --color-bkgd-400: var(--color-bkgd-400-night);
 
-        --typeA10-hover: var(--typeA10-night-hover);
-        --type100-hover: var(--type100-night-hover);
+        --color-type-100: var(--color-type-100-night);
+        --color-type-200: var(--color-type-200-night);
+        --color-type-300: var(--color-type-300-night);
+        --color-type-400: var(--color-type-400-night);
+        --color-type-500: var(--color-type-500-night);
 
-        --bgrdA10-hover: var(--bgrdA10-night-hover);
-        --bgrd100-hover: var(--bgrd100-night-hover);
+        --color-line-100: var(--color-line-100-night);
+        --color-line-200: var(--color-line-200-night);
 
-        --ring100-hover: var(--ring100-night-hover);
-        --ring200-hover: var(--ring200-night-hover);
+        --color-ring-100: var(--color-ring-100-night);
+        --color-ring-200: var(--color-ring-200-night);
+
+        --color-drop-100: var(--color-drop-100-night);
+        --color-drop-200: var(--color-drop-200-night);
     }
 }
 
 [color-scheme="light"] {
-    color-scheme: var(--light);
-    --brand: var(--brand-light);
-    --type100: var(--type100-light);
-    --type200: var(--type200-light);
-    --type300: var(--type300-light);
+    --color-primary-100: var(--color-primary-100-light);
+    --color-primary-200: var(--color-primary-200-light);
+    --color-primary-300: var(--color-primary-300-light);
 
-    --bgrdA10: var(--bgrdA10-light);
-    --bgrd100: var(--bgrd100-light);
-    --bgrd200: var(--bgrd200-light);
+    --color-popcorn-100: var(--color-popcorn-100-light);
+    --color-popcorn-200: var(--color-popcorn-200-light);
 
-    --ring100: var(--ring100-light);
+    --color-bkgd-100: var(--color-bkgd-100-light);
+    --color-bkgd-200: var(--color-bkgd-200-light);
+    --color-bkgd-300: var(--color-bkgd-300-light);
+    --color-bkgd-400: var(--color-bkgd-400-light);
+
+    --color-type-100: var(--color-type-100-light);
+    --color-type-200: var(--color-type-200-light);
+    --color-type-300: var(--color-type-300-light);
+    --color-type-400: var(--color-type-400-light);
+    --color-type-500: var(--color-type-500-light);
+
+    --color-line-100: var(--color-line-100-light);
+    --color-line-200: var(--color-line-200-light);
+
+    --color-ring-100: var(--color-ring-100-light);
+    --color-ring-200: var(--color-ring-200-light);
+
+    --color-drop-100: var(--color-drop-100-light);
+    --color-drop-200: var(--color-drop-200-light);
 }
 
 [color-scheme="night"] {
-    color-scheme: var(--night);
-    --brand: var(--brand-night);
-    --type100: var(--type100-night);
-    --type200: var(--type200-night);
-    --type300: var(--type300-night);
+    --color-primary-100: var(--color-primary-100-night);
+    --color-primary-200: var(--color-primary-200-night);
+    --color-primary-300: var(--color-primary-300-night);
 
-    --bgrdA10: var(--bgrdA10-night);
-    --bgrd100: var(--bgrd100-night);
-    --bgrd200: var(--bgrd200-night);
+    --color-popcorn-100: var(--color-popcorn-100-night);
+    --color-popcorn-200: var(--color-popcorn-200-night);
 
-    --ring100: var(--ring100-night);
+    --color-bkgd-100: var(--color-bkgd-100-night);
+    --color-bkgd-200: var(--color-bkgd-200-night);
+    --color-bkgd-300: var(--color-bkgd-300-night);
+    --color-bkgd-400: var(--color-bkgd-400-night);
+
+    --color-type-100: var(--color-type-100-night);
+    --color-type-200: var(--color-type-200-night);
+    --color-type-300: var(--color-type-300-night);
+    --color-type-400: var(--color-type-400-night);
+    --color-type-500: var(--color-type-500-night);
+
+    --color-line-100: var(--color-line-100-night);
+    --color-line-200: var(--color-line-200-night);
+
+    --color-ring-100: var(--color-ring-100-night);
+    --color-ring-200: var(--color-ring-200-night);
+
+    --color-drop-100: var(--color-drop-100-night);
+    --color-drop-200: var(--color-drop-200-night);
 }
 
 @media (min-width: 992px) {
-    html {
+    :root {
         --fs-700: 2.25rem;
         --fs-600: 1.75rem;
         --fs-500: 1.25rem;
@@ -186,10 +251,8 @@ body {
     position: relative;
     font-size: var(--fs-400);
     font-family: var(--ff-body);
-    background-image: url("./assets/images/3px-tile.png");
-    background-color: var(--bgrd200);
-    background-blend-mode: overlay;
-    color: var(--type2);
+    background-color: var(--color-bkgd-100);
+    color: var(--color-type-100);
 }
 
 ul {
@@ -199,37 +262,38 @@ ul {
 h1,
 h2,
 h3 {
-    color: var(--type1);
+    color: var(--color-type-100);
     font-family: var(--ff-head);
-    line-height: 1;
-    text-transform: uppercase;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 h1 {
     font-size: var(--fs-700);
+    font-weight: 700;
     margin-bottom: var(--sp-700);
 }
 
 h2 {
     font-size: var(--fs-600);
+    font-weight: 600;
     margin-bottom: var(--sp-600);
 }
 
 h3 {
     font-size: var(--fs-500);
+    font-weight: 500;
     margin-bottom: var(--sp-500);
 }
 
 p {
-    color: var(--type2);
+    color: var(--color-type-200);
     line-height: 1.6;
-    font-weight: 500;
     margin-bottom: var(--sp-700);
 }
 
 a {
-    color: var(--type3);
+    color: var(--color-type-500);
     text-decoration: none;
 }
 
@@ -290,7 +354,7 @@ section {
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("./assets/images/underline.svg");
+    background-image: url("/icons/underline.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
