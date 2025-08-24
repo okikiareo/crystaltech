@@ -7,6 +7,7 @@
 --ring100-hover: var(--ring100-night-hover);
 --ring200-hover: var(--ring200-night-hover);
 
+#f5f3ff
 
 --type100-hover: var(--type100-light-hover);
 --type200-hover: var(--type200-light-hover);

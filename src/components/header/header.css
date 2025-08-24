@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 4000;
-    background-color: var(--color-bkgd-200);
+    background-color: var(--color-bkgd-100);
 }
 
 .header.glue {

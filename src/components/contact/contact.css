@@ -7,8 +7,12 @@
     radial-gradient(at 79% 15%, hsla(37, 98%, 61%, 1) 0px, transparent 50%),
     radial-gradient(at 26% 63%, hsla(20, 73%, 50%, 1) 0px, transparent 50%);
     /* background-image: url("/icons/mesh-gradient.svg"); */
+    background-color: rgb(246, 227, 191);
+    background-color: #ef8c2e;
 }
-
+.contact-lead, .contact-para{
+color: #fff;
+}
 .contact-wrap {
     align-items: start;
     flex-direction: column-reverse;
