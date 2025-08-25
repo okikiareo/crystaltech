@@ -1,163 +1,276 @@
-.hero {
-    min-height: calc(100vh - var(--height));
-    min-height: 100vh;
-    background-color: hsl(29, 40%, 99%);
-    padding-bottom: 0;
-    position: relative;
-}
-
-.hero::before {
-    content: "";
+:root{
+    /* keep your existing variables here if you have them */
+    /* example placeholders (you likely have these defined elsewhere) */
+    --height: 0px;
+    --sp-800: 4rem;
+    --sp-700: 3rem;
+    --sp-xl: 2rem;
+    --color-type-400: #0f172a;
+    --color-primary-100: #ffedd5;
+  }
+  
+  /* ---------- existing hero styles ---------- */
+  .hero {
+      min-height: calc(100vh - var(--height));
+      min-height: 100vh;
+      background-color: hsl(29, 40%, 99%);
+      padding-bottom: 0;
+      position: relative;
+  }
+  
+  .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-image: radial-gradient(circle at 1px 1px, #ef8c2e 1px, transparent 0);
+      background-size: 20px 20px;
+      opacity: 0.3;
+  }
+  
+  .hero-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: var(--sp-800);
+      padding-top: 2em;
+      padding-bottom: 2em;
+      position: relative;
+      z-index: 1000;
+  }
+  
+  .hero-view {
+      --size: 400px;
+      position: relative;
+      margin-bottom: var(--sp-700);
+  }
+  
+  .hero-view-blob {
+      width: var(--size);
+      height: var(--size);
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      background-image: linear-gradient(135deg,
+              hsl(38, 99%, 61%),
+              hsl(21, 74%, 51%));
+      justify-content: center;
+  }
+  
+  .hero-view-haze {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/icons/grain.svg");
+      z-index: 1000;
+  }
+  
+  .hero-view-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      bottom: 0;
+  }
+  
+  /* ---------- badge rules (overrides any previous display:none) ---------- */
+  .hero-view-tag1,
+  .hero-view-tag2 {
+    display: flex !important; /* ensure visible */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-image: radial-gradient(circle at 1px 1px, #ef8c2e 1px, transparent 0);
-    background-size: 20px 20px;
-    opacity: 0.3;
-
-}
-
-.hero-wrap {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: var(--sp-800);
-    padding-top: 2em;
-    padding-bottom: 2em;
-    position: relative;
-    z-index: 1000;
-}
-
-.hero-view {
-    --size: 400px;
-    position: relative;
-    margin-bottom: var(--sp-700);
-}
-
-.hero-view-blob {
-    width: var(--size);
-    height: var(--size);
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background-image: linear-gradient(135deg,
-            hsl(38, 99%, 61%),
-            hsl(21, 74%, 51%));
+    gap: 0.6rem;
+    z-index: 2000; /* above haze and image */
+  }
+  
+  /* base card */
+  .hero-badge {
+    background: #ffffff;
+    padding: 0.5rem 0.9rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(11,22,40,0.12);
+    min-width: 140px;
+    max-width: 240px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #111827;
+    transition: transform .22s ease, box-shadow .22s ease;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* icon */
+  .hero-badge-icon {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-}
-
-.hero-view-haze {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/icons/grain.svg");
-    z-index: 1000;
-}
-
-.hero-view-item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: absolute;
-    bottom: 0;
-}
-
-.hero-view-tag1 {
-    display: none;
-    inset: auto auto 20px 0;
-}
-
-.hero-view-tag2 {
-    display: none;
-    inset: 20px 0 auto auto;
-}
-
-.hero-info {
-    margin-bottom: var(--sp-xl);
-}
-
-.hero-info-lead {}
-
-.hero-info-para {}
-
-.hero-info-link {
-    color: var(--color-type-400);
-    background-color: var(--color-primary-100);
-    font-weight: 500;
-}
-
-.hero-tape {
+    border-radius: 50%;
+    background: rgba(59,130,246,0.08);
+    color: #2563eb;
+    flex-shrink: 0;
+  }
+  
+  /* badge text safety */
+  .hero-badge-text {
+    white-space: nowrap;
     overflow: hidden;
-    white-space: nowrap;
-    display: none;
-}
-
-.hero-tape-col1,
-.hero-tape-col2 {
-    min-width: 100%;
-    animation: tape 10000ms linear infinite;
-    white-space: nowrap;
-}
-
-.hero-tape-item {
-    width: 100%;
-    height: 80px;
-    filter: brightness(0) invert(0.25);
-    border: 1px solid;
-    border-right: transparent;
-}
-
-.hero-tape-item:nth-child(2)>img {
-    scale: 1.5;
-}
-
-.hero-tape-item:nth-child(3)>img {
-    scale: 2.2;
-}
-
-.hero-tape-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-@media (max-width: 36em) {
-    .hero-view {
-        --size: 320px;
+    text-overflow: ellipsis;
+  }
+  
+  /* positions (adjust offsets here if you want different spacing) */
+  .hero-view-tag1 { top: 18px; left: 18px; }
+  .hero-view-tag2 { bottom: 18px; right: 18px; }
+  
+  /* hover lift for desktop */
+  .hero-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(11,22,40,0.16);
+  }
+  
+  /* subtle floating animation */
+  @keyframes floaty {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @media (min-width: 62em) {
+    .hero-view-tag1,
+    .hero-view-tag2 {
+      animation: floaty 6s ease-in-out infinite;
     }
-}
+  }
+  
+  /* ---------- rest of original styles ---------- */
+  .hero-info {
+      margin-bottom: var(--sp-xl);
+  }
+  
+  .hero-info-lead {}
+  
+  .hero-info-para {}
+  
+  .hero-info-link {
+      color: var(--color-type-400);
+      background-color: var(--color-primary-100);
+      font-weight: 500;
+  }
+  
+  .hero-tape {
+      overflow: hidden;
+      white-space: nowrap;
+      display: none;
+  }
+  
+  .hero-tape-col1,
+  .hero-tape-col2 {
+      min-width: 100%;
+      animation: tape 10000ms linear infinite;
+      white-space: nowrap;
+  }
+  
+  .hero-tape-item {
+      width: 100%;
+      height: 80px;
+      filter: brightness(0) invert(0.25);
+      border: 1px solid;
+      border-right: transparent;
+  }
+  
+  .hero-tape-item:nth-child(2)>img {
+      scale: 1.5;
+  }
+  
+  .hero-tape-item:nth-child(3)>img {
+      scale: 2.2;
+  }
+  
+  .hero-tape-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+  }
+  
+  @keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .float-box {
+    animation: float 3s ease-in-out infinite;
+  }
+  
 
-@media (min-width: 62em) {
-    .hero {
-        padding-top: 2em;
+  @media (max-width: 36em) {
+      .hero-view {
+          --size: 320px;
+      }
+  }
+  
+  @media (min-width: 62em) {
+      .hero {
+          padding-top: 2em;
+      }
+  
+      .hero-wrap {
+          column-gap: 5em;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+      }
+  
+      .hero-view,
+      .hero-info {
+          width: max-content;
+          margin-bottom: 0;
+      }
+  
+      .hero-view {
+          --size: 450px;
+      }
+  
+      .hero-info-text {
+          max-width: 450px;
+      }
+  }
+  
+  /* mobile tweaks */
+  @media (max-width: 48em) {
+    .hero-badge {
+      min-width: 120px;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.9rem;
+      border-radius: 10px;
     }
-
-    .hero-wrap {
-        column-gap: 5em;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-
-    .hero-view,
-    .hero-info {
-        width: max-content;
-        margin-bottom: 0;
-    }
-
-    .hero-view {
-        --size: 450px;
-    }
-
-    .hero-info-text {
-        max-width: 450px;
-    }
-}
+    .hero-view-tag1 { top: 12px; left: 12px; }
+    .hero-view-tag2 { bottom: 12px; right: 12px; }
+  }
+  
+  /* hide on very small screens */
+   @media (max-width: 28em) {
+    .hero-badge {
+        min-width: 120px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+        border-radius: 10px;
+      }
+      .hero-badge-icon {
+        width: 26px;
+        height: 26px;
+      }
+      .up-hero, .dn-hero{
+width: 12px;
+height: 12px;
+      }
+  } 
