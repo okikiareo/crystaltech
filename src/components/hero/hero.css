@@ -1,7 +1,7 @@
 .hero {
     min-height: calc(100vh - var(--height));
     min-height: 100vh;
-    background-color: hsl(29, 40%, 99%);
+    background-color: var(--color-bkgd-200);
     padding-bottom: 0;
     position: relative;
 }

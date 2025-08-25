@@ -1,5 +1,6 @@
 .services-card {
     width: 100%;
+    /* color: var(--color-type-200); */
     column-gap: 1em;
     align-items: start;
     justify-content: space-between;
@@ -11,6 +12,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
+    /* background-color: ; */
 }
 
 .services-card:last-child {
@@ -37,34 +39,41 @@
     column-gap: 1.5em;
 }
 
+
+
 .services-card:nth-child(1) {
-    --services-cl-base: var(--);
+    --services-cl-base: #4ECDC4;
     --services-cl-icon: var(--);
     color: var(--services-cl-icon);
-    background-color: var(--services-cl-base);
+    /* background-color: var(--services-cl-base); */
+    background-color: #FACF55;
 }
 
 .services-card:nth-child(2) {
-    --services-cl-base: var(--);
+    --services-cl-base: #FF6B6B;
     --services-cl-icon: var(--);
     color: var(--services-cl-icon);
-    background-color: var(--services-cl-base);
+    /* background-color: var(--services-cl-base); */
+    background-color: #C8ABE6;
 }
 
 .services-card:nth-child(3) {
-    --services-cl-base: var(--);
+    --services-cl-base: #FFD93D;
     --services-cl-icon: var(--);
     color: var(--services-cl-icon);
-    background-color: var(--services-cl-base);
+    /* background-color: var(--services-cl-base); */
+    background-color: #6EB8E1;
 }
 
 .services-card:nth-child(4) {
-    --services-cl-base: var(--);
+    --services-cl-base: #9B59B6;
     --services-cl-icon: var(--);
     color: var(--services-cl-icon);
-    background-color: var(--services-cl-base);
+    /* background-color: var(--services-cl-base); */
+    background-color: #DFEAB5;
 }
 
+*/
 .services-card-icon > path {
     fill: var(--);
 }
