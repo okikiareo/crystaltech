@@ -7,8 +7,8 @@
 }
 
 .about-col1-link {
-    color: var(--color-type-400);
-    background-color: var(--color-bkgd-400);
+    color: var(--color-txt-pr-100);
+    background-color: var(--color-btn-pr-100);
 }
 
 .about-col2 {

@@ -42,7 +42,8 @@
     border-radius: 8px;
     /* border-top-right-radius: 8px; */
     /* border-top-right-radius: 8px; */
-    background-color: var(--bkgd2);
+    background-color: var( --color-txt-pr-100);
+
 }
 
 .Blog-card-rack {

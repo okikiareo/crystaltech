@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="hero-view-blob flex">
             <div className="hero-view-haze"></div>
             <img
-              className="hero-view-item"
+              className="hero-view-item "
               src="/images/peep.png"
               alt="peep"
             />

@@ -3,8 +3,8 @@
 }
 
 .blog-link {
-    color: var(--);
-    background-color: var(--);
+    color: var(--color-txt-pr-100);
+    background-color: var(--color-btn-pr-100);
 }
 
 @media (min-width: 62em) {

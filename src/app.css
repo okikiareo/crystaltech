@@ -140,8 +140,20 @@
     --color-bkgd-200-light: var(--md-sys-color-surface-light);
     --color-bkgd-300-light: var(--md-sys-color-surface-container-lowest-light);
     --color-bkgd-400-light: rgb(255, 255, 255);
+    --color-bkgd-500-light: rgb(0, 0, 0);
+    --color-bkgd-600-ight: var(--color-bkgd-400);
 
     --color-type-100-light: var(--md-sys-color-on-background-light);
+    --color-type-400-light: #fff;
+    --color-primary-100-light: #ef8c2e;
+
+    --color-btn-pr-100-light:#ef8c2e;
+    --color-txt-pr-100-light:#fff;
+
+    --color-svg-wht: invert(1);
+    --footer-wht-color: #f5f5ed;
+
+    
     /* --color-type-200-light: var(--md-sys-color-inverse-on-surface-light); */
     /*
     --color-primary-100-light: #EF8C2E;
@@ -177,9 +189,18 @@
     --color-bkgd-200-night: var(--md-sys-color-surface-night);
     --color-bkgd-300-night: var(--md-sys-color-surface-container-lowest-night);
     --color-bkgd-400-night: var(--md-sys-color-surface-night);
+    --color-bkgd-500-night: var(--color-bkgd-100);
+    --color-bkgd-600-night: #000;
+    
 
     --color-type-100-night: var(--md-sys-color-on-background-night);
     --color-type-200-night: var(--md-sys-color-on-surface-night);
+
+    --color-btn-pr-100-night:#fff;
+    --color-txt-pr-100-night:#000;
+    --footer-drk-color: ;
+
+    --color-svg-drk: invert(0);
 
     /*
     --color-primary-100-night: #EF8C2E;
@@ -311,7 +332,14 @@
     --color-bkgd-200: var(--color-bkgd-200-light);
     --color-bkgd-300: var(--color-bkgd-300-light);
     --color-bkgd-400: var(--color-bkgd-400-light);
+    --color-bkgd-500: var(--color-bkgd-500-light);
 
+    --color-btn-pr-100: var(--color-btn-pr-100-light);
+    --color-txt-pr-100: var(--color-txt-pr-100-light);
+
+    --invert-svg: var(--color-svg-drk);
+    --color-footer: var(--footer-wht-color);
+    
     --color-type-100: var(--color-type-100-light);
     --color-type-200: var(--color-type-200-light);
     --color-type-300: var(--color-type-300-light);
@@ -340,6 +368,14 @@
     --color-bkgd-200: var(--color-bkgd-200-night);
     --color-bkgd-300: var(--color-bkgd-300-night);
     --color-bkgd-400: var(--color-bkgd-400-night);
+    --color-bkgd-500: var(--color-bkgd-500-night);
+    --color-bkgd-600: var(--color-bkgd-600-night);
+
+    --color-btn-pr-100: var(--color-btn-pr-100-night);
+    --color-txt-pr-100: var(--color-txt-pr-100-night);
+
+    --invert-svg: var(--color-svg-wht);
+    --color-footer: var(--footer-drk-color);
 
     --color-type-100: var(--color-type-100-night);
     --color-type-200: var(--color-type-200-night);

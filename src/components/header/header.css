@@ -37,7 +37,7 @@
 }
 
 .header-list-link {
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
 }
 
 .header-ctrl {
@@ -53,13 +53,14 @@
 .header-ctrl-line {
     width: 100%;
     height: 2px;
-    background-color: var(--color-bkgd-400);
+    background-color:  var(--color-type-100);
     display: block;
     transition: transform 500ms;
 }
 
 .open .header-list {
     display: block;
+    background-color: var(--color-type-400-light);
 }
 
 .open .header-ctrl {

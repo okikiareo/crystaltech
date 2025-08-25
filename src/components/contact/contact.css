@@ -33,12 +33,12 @@ color: #fff;
 }
 
 .contact-link-phone {
-    color: #ffffff;
+    color: #000;
     background-color: #1178D9;
 }
 
 .contact-link-phone {
-    color: var(--brand);
+    color: #000;
     background-color: #ffffff;
 }
 

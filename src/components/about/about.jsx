@@ -9,6 +9,9 @@ const About = () => {
                     <h2 className="about-col1-lead">
                         About Us
                     </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint laborum nostrum provident accusantium? Soluta quaerat consectetur earum perspiciatis atque dolorem reprehenderit doloribus similique consequuntur ex esse natus, iusto aspernatur maiores quisquam odit adipisci debitis sint omnis quas animi, voluptate saepe.
+                    </p>
                     <Link className="about-col1-link btn" to="/about">
                         Learn More
                     </Link>

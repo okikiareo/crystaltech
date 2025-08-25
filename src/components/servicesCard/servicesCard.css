@@ -1,6 +1,6 @@
 .services-card {
     width: 100%;
-    /* color: var(--color-type-200); */
+    color: #000;
     column-gap: 1em;
     align-items: start;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 
 .services-card-lead {
-    color: var(--);
+    color: #000;
 }
 
 .services-card-list {

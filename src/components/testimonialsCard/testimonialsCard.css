@@ -1,6 +1,6 @@
 .testimonial-card {
     min-width: 100%;
-    background-color: #fcfcfc;
+    background-color: var( --color-txt-pr-100);
     display: grid;
     grid-template-columns: repeat(2, auto);
     row-gap: 1em;

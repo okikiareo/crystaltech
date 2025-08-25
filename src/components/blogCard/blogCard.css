@@ -6,6 +6,8 @@
     border-radius: 8px;
     margin-bottom: var(--sp-700);
     background-color: var(--);
+    background-color: var( --color-txt-pr-100);
+
 }
 
 .blog-card-case {
