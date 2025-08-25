@@ -137,6 +137,12 @@
 :root {
     /* === Light Theme === */
     --color-bkgd-100-light: var(--md-sys-color-background-light);
+    --color-bkgd-200-light: var(--md-sys-color-surface-light);
+    --color-bkgd-300-light: var(--md-sys-color-surface-container-lowest-light);
+    --color-bkgd-400-light: rgb(255, 255, 255);
+
+    --color-type-100-light: var(--md-sys-color-on-background-light);
+    /* --color-type-200-light: var(--md-sys-color-inverse-on-surface-light); */
     /*
     --color-primary-100-light: #EF8C2E;
     --color-primary-200-light: #D9791C;
@@ -168,6 +174,12 @@
     */
     /* === Night Theme === */
     --color-bkgd-100-night: var(--md-sys-color-background-night);
+    --color-bkgd-200-night: var(--md-sys-color-surface-night);
+    --color-bkgd-300-night: var(--md-sys-color-surface-container-lowest-night);
+    --color-bkgd-400-night: var(--md-sys-color-surface-night);
+
+    --color-type-100-night: var(--md-sys-color-on-background-night);
+    --color-type-200-night: var(--md-sys-color-on-surface-night);
 
     /*
     --color-primary-100-night: #EF8C2E;
@@ -396,7 +408,7 @@ h3 {
 }
 
 p {
-    color: var(--color-type-200);
+    /* color: var(--color-type-200); */
     line-height: 1.6;
     margin-bottom: var(--sp-700);
 }

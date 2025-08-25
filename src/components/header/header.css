@@ -4,12 +4,11 @@
     left: 0;
     width: 100%;
     z-index: 4000;
-    background-color: var(--color-bkgd-100);
+    background-color: var(--color-bkgd-200);
 }
 
 .header.glue {
-    background-color: var(--color-bkgd-100);
-    /* box-shadow: var(--color-drop-100); */
+    background-color: var(--color-bkgd-300);
 }
 
 .header-wrap {
