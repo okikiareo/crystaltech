@@ -24,8 +24,7 @@
     src: url("/fonts/GT-Walsheim-Pro-300.ttf");
 }
 
-*/
-*,
+*/ *,
 *::before,
 *::after {
     margin: 0;
@@ -34,7 +33,111 @@
 }
 
 :root {
+    --md-sys-color-primary-light: rgb(71 35 0);
+    --md-sys-color-surface-tint-light: rgb(137 81 30);
+    --md-sys-color-on-primary-light: rgb(255 255 255);
+    --md-sys-color-primary-container-light: rgb(111 60 10);
+    --md-sys-color-on-primary-container-light: rgb(255 255 255);
+    --md-sys-color-secondary-light: rgb(61 39 22);
+    --md-sys-color-on-secondary-light: rgb(255 255 255);
+    --md-sys-color-secondary-container-light: rgb(93 68 48);
+    --md-sys-color-on-secondary-container-light: rgb(255 255 255);
+    --md-sys-color-tertiary-light: rgb(42 47 8);
+    --md-sys-color-on-tertiary-light: rgb(255 255 255);
+    --md-sys-color-tertiary-container-light: rgb(71 76 35);
+    --md-sys-color-on-tertiary-container-light: rgb(255 255 255);
+    --md-sys-color-error-light: rgb(96 0 4);
+    --md-sys-color-on-error-light: rgb(255 255 255);
+    --md-sys-color-error-container-light: rgb(152 0 10);
+    --md-sys-color-on-error-container-light: rgb(255 255 255);
+    --md-sys-color-background-light: rgb(255 248 245);
+    --md-sys-color-on-background-light: rgb(34 26 20);
+    --md-sys-color-surface-light: rgb(255 248 245);
+    --md-sys-color-on-surface-light: rgb(0 0 0);
+    --md-sys-color-surface-variant-light: rgb(243 223 210);
+    --md-sys-color-on-surface-variant-light: rgb(0 0 0);
+    --md-sys-color-outline-light: rgb(53 42 33);
+    --md-sys-color-outline-variant-light: rgb(84 71 61);
+    --md-sys-color-shadow-light: rgb(0 0 0);
+    --md-sys-color-scrim-light: rgb(0 0 0);
+    --md-sys-color-inverse-surface-light: rgb(56 47 40);
+    --md-sys-color-inverse-on-surface-light: rgb(255 255 255);
+    --md-sys-color-inverse-primary-light: rgb(255 183 126);
+    --md-sys-color-primary-fixed-light: rgb(111 60 10);
+    --md-sys-color-on-primary-fixed-light: rgb(255 255 255);
+    --md-sys-color-primary-fixed-dim-light: rgb(81 40 0);
+    --md-sys-color-on-primary-fixed-variant-light: rgb(255 255 255);
+    --md-sys-color-secondary-fixed-light: rgb(93 68 48);
+    --md-sys-color-on-secondary-fixed-light: rgb(255 255 255);
+    --md-sys-color-secondary-fixed-dim-light: rgb(68 46 28);
+    --md-sys-color-on-secondary-fixed-variant-light: rgb(255 255 255);
+    --md-sys-color-tertiary-fixed-light: rgb(71 76 35);
+    --md-sys-color-on-tertiary-fixed-light: rgb(255 255 255);
+    --md-sys-color-tertiary-fixed-dim-light: rgb(49 53 15);
+    --md-sys-color-on-tertiary-fixed-variant-light: rgb(255 255 255);
+    --md-sys-color-surface-dim-light: rgb(197 182 173);
+    --md-sys-color-surface-bright-light: rgb(255 248 245);
+    --md-sys-color-surface-container-lowest-light: rgb(255 255 255);
+    --md-sys-color-surface-container-low-light: rgb(254 238 228);
+    --md-sys-color-surface-container-light: rgb(239 223 214);
+    --md-sys-color-surface-container-high-light: rgb(225 209 200);
+    --md-sys-color-surface-container-highest-light: rgb(211 196 186);
+
+    --md-sys-color-primary-night: rgb(255 237 225);
+    --md-sys-color-surface-tint-night: rgb(255 183 126);
+    --md-sys-color-on-primary-night: rgb(0 0 0);
+    --md-sys-color-primary-container-night: rgb(252 179 119);
+    --md-sys-color-on-primary-container-night: rgb(23 7 0);
+    --md-sys-color-secondary-night: rgb(255 237 225);
+    --md-sys-color-on-secondary-night: rgb(0 0 0);
+    --md-sys-color-secondary-container-night: rgb(223 188 162);
+    --md-sys-color-on-secondary-container-night: rgb(23 7 0);
+    --md-sys-color-tertiary-night: rgb(239 244 189);
+    --md-sys-color-on-tertiary-night: rgb(0 0 0);
+    --md-sys-color-tertiary-container-night: rgb(193 199 146);
+    --md-sys-color-on-tertiary-container-night: rgb(10 12 0);
+    --md-sys-color-error: rgb(255 236 233);
+    --md-sys-color-on-error-night: rgb(0 0 0);
+    --md-sys-color-error-container-night: rgb(255 174 164);
+    --md-sys-color-on-error-container-night: rgb(34 0 1);
+    --md-sys-color-background-night: rgb(25 18 12);
+    --md-sys-color-on-background-night: rgb(239 223 214);
+    --md-sys-color-surface-night: rgb(25 18 12);
+    --md-sys-color-on-surface-night: rgb(255 255 255);
+    --md-sys-color-surface-variant-night: rgb(81 68 59);
+    --md-sys-color-on-surface-variant-night: rgb(255 255 255);
+    --md-sys-color-outline-night: rgb(255 237 225);
+    --md-sys-color-outline-variant-night: rgb(210 191 179);
+    --md-sys-color-shadow-night: rgb(0 0 0);
+    --md-sys-color-scrim-night: rgb(0 0 0);
+    --md-sys-color-inverse-surface-night: rgb(239 223 214);
+    --md-sys-color-inverse-on-surface-night: rgb(0 0 0);
+    --md-sys-color-inverse-primary-night: rgb(110 59 8);
+    --md-sys-color-primary-fixed-night: rgb(255 220 195);
+    --md-sys-color-on-primary-fixed-night: rgb(0 0 0);
+    --md-sys-color-primary-fixed-dim-night: rgb(255 183 126);
+    --md-sys-color-on-primary-fixed-variant-night: rgb(32 12 0);
+    --md-sys-color-secondary-fixed-night: rgb(255 220 195);
+    --md-sys-color-on-secondary-fixed-night: rgb(0 0 0);
+    --md-sys-color-secondary-fixed-dim-night: rgb(227 192 166);
+    --md-sys-color-on-secondary-fixed-variant-night: rgb(30 13 2);
+    --md-sys-color-tertiary-fixed-night: rgb(225 231 176);
+    --md-sys-color-on-tertiary-fixed-night: rgb(0 0 0);
+    --md-sys-color-tertiary-fixed-dim-night: rgb(197 203 150);
+    --md-sys-color-on-tertiary-fixed-variant-night: rgb(16 19 0);
+    --md-sys-color-surface-dim-night: rgb(25 18 12);
+    --md-sys-color-surface-bright-night: rgb(89 78 71);
+    --md-sys-color-surface-container-lowest-night: rgb(0 0 0);
+    --md-sys-color-surface-container-low-night: rgb(38 30 24);
+    --md-sys-color-surface-container-night: rgb(56 47 40);
+    --md-sys-color-surface-container-high-night: rgb(67 58 51);
+    --md-sys-color-surface-container-highest-night: rgb(79 69 62);
+}
+
+:root {
     /* === Light Theme === */
+    --color-bkgd-100-light: var(--md-sys-color-background-light);
+    /*
     --color-primary-100-light: #EF8C2E;
     --color-primary-200-light: #D9791C;
     --color-primary-300-light: #C26F17;
@@ -62,7 +165,11 @@
     --color-drop-100-light: rgba(239, 140, 46, 0.15);
     --color-drop-200-light: rgba(239, 140, 46, 0.15);
 
+    */
     /* === Night Theme === */
+    --color-bkgd-100-night: var(--md-sys-color-background-night);
+
+    /*
     --color-primary-100-night: #EF8C2E;
     --color-primary-200-night: #FF9D42;
     --color-primary-300-night: #FFB366;
@@ -89,6 +196,8 @@
 
     --color-drop-100-night: rgba(239, 140, 46, 0.2);
     --color-drop-200-night: rgba(239, 140, 46, 0.3);
+
+    */
 
     /*  */
     --ff-body: "GT Walsheim Pro", sans-serif;
