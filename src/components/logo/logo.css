@@ -1,7 +1,7 @@
 .logo {
     font-size: var(--fs-500);
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--type);
     column-gap: 0.5em;
     letter-spacing: 1px;
@@ -10,4 +10,3 @@
 .logo-icon {
     width: 24px;
 }
-

@@ -167,7 +167,7 @@
     animation: floaty 6s ease-in-out infinite;
   }
 }
- 
+
 /* ---------- rest of original styles ---------- */
 .hero-info {
   margin-bottom: var(--sp-xl);
@@ -183,11 +183,12 @@
   font-weight: 500;
 }
 
-.hero-tape{
+.hero-tape {
   overflow: hidden;
 }
-.hero-tape-col1, 
-.hero-tape-col2{
+
+.hero-tape-col1,
+.hero-tape-col2 {
   width: 100%;
   min-width: 100%;
   align-items: center;
@@ -236,9 +237,16 @@
 
 
 
-@media (max-width: 36em) {
+@media (max-width: 46em) {
   .hero-view {
     --size: 320px;
+  }
+
+  .hero-tape-col1,
+  .hero-tape-col2 {
+    min-width: 170%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr)
   }
 }
 
@@ -286,6 +294,7 @@
     bottom: 12px;
     right: 12px;
   }
+
   .hero-wrap {
     padding-top: 0;
   }

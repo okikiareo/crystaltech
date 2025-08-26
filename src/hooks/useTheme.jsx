@@ -4,43 +4,40 @@ import { Cache } from "../logic";
 import { ACTIONS } from "../utils/constants";
 
 export const useTheme = () => {
-    const { dispatch } = useStore();
+  const { dispatch } = useStore();
 
-    useLayoutEffect(() => {
-        const savedMode = Cache.get({ key: "mode" });
-        const mediaMode = window.matchMedia(
-            "(prefers-color-scheme: light)"
-        );
-        if (savedMode) {
-            dispatch({ 
-                type: ACTIONS.UPDATE_MODE, 
-                mode: savedMode 
-            });
-        } else {
-            const preferred = "auto";
-            dispatch({ 
-                type: ACTIONS.UPDATE_MODE, 
-                mode: preferred
-            });
-        }
+  useLayoutEffect(() => {
+    const savedMode = Cache.get({ key: "mode" }); // "light" | "night" | "auto" | null
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+    let mediaHandler = null;
 
-        function watchMedia(e) {
-            if (savedMode) { return }
-            if (e.matches) {
-                dispatch({
-                    type: ACTIONS.UPDATE_MODE,
-                    mode: "light"
-                });
-            } else {
-                dispatch({
-                    type: ACTIONS.UPDATE_MODE,
-                    mode: "night"
-                });
-            }
-        }
-        mediaMode.addEventListener("change", watchMedia);
-        return () => {
-            mediaMode.removeEventListener("change", watchMedia);
-        }
-    }, []);
-}
+    function applySystemPreference(e) {
+      const isLight = e ? e.matches : mediaQuery.matches;
+      dispatch({
+        type: ACTIONS.UPDATE_MODE,
+        mode: isLight ? "light" : "night",
+      });
+    }
+
+    if (savedMode) {
+      if (savedMode === "auto") {
+        // follow system preference
+        applySystemPreference();
+        mediaHandler = applySystemPreference;
+        mediaQuery.addEventListener("change", mediaHandler);
+      } else {
+        // use saved explicit preference
+        dispatch({ type: ACTIONS.UPDATE_MODE, mode: savedMode });
+      }
+    } else {
+      // no saved preference → default to light
+      dispatch({ type: ACTIONS.UPDATE_MODE, mode: "light" });
+    }
+
+    return () => {
+      if (mediaHandler) {
+        mediaQuery.removeEventListener("change", mediaHandler);
+      }
+    };
+  }, [dispatch]);
+};

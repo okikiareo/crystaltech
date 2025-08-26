@@ -15,6 +15,11 @@
     /* background-color: ; */
 }
 
+@media (max-width: 36em) {
+    .services-card-desc {
+        height: auto !important;
+    }
+}
 .services-card:last-child {
     border-bottom: none;
 }

@@ -21,7 +21,7 @@
 
 .header-logo {
     font-size: var(--fs-500);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--type-100);
 }
 

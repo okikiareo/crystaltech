@@ -4,7 +4,7 @@ import {
     Route,
     RouterProvider
 } from "react-router-dom";
-import { Home, Blog, About } from "./pages";
+import { Home, Blog, About, Products } from "./pages";
 import { HomeLayout } from "./containers";
 import { useTheme, useStyle, useStore } from "./hooks";
 import { homeLoader, blogLoader } from "./logic";
@@ -15,6 +15,7 @@ const ref = createBrowserRouter(
             <Route index element={<Home />} loader={homeLoader} />
             <Route path="blog" element={<Blog />} loader={blogLoader} />
             <Route path="about" element={<About />} />
+            <Route path="products" element={<Products />} />
         </Route>
     )
 );
