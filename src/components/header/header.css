@@ -38,6 +38,7 @@
 
 .header-list-link {
     font-size: var(--fs-300);
+    font-weight: 500;
 }
 
 .header-ctrl {
@@ -60,7 +61,7 @@
 
 .open .header-list {
     display: block;
-    background-color: var(--color-type-400-light);
+    background-color: var(--color-bkgd-400);
 }
 
 .open .header-ctrl {

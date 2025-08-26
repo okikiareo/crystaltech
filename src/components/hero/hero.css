@@ -146,7 +146,7 @@
 }
 
 /* subtle floating animation */
-@keyframes floaty {
+@keyframes float {
   0% {
     transform: translateY(0);
   }
@@ -173,9 +173,9 @@
   margin-bottom: var(--sp-xl);
 }
 
-.hero-info-lead {}
+/* .hero-info-lead {} */
 
-.hero-info-para {}
+/* .hero-info-para {} */
 
 .hero-info-link {
   color: var(--color-txt-pr-100);
@@ -183,40 +183,37 @@
   font-weight: 500;
 }
 
-.hero-tape {
+.hero-tape{
   overflow: hidden;
-  white-space: nowrap;
-  display: none;
+}
+.hero-tape-col1, 
+.hero-tape-col2{
+  width: 100%;
+  min-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  animation: tape 15000ms linear infinite;
 }
 
-.hero-tape-col1,
-.hero-tape-col2 {
-  min-width: 100%;
-  animation: tape 10000ms linear infinite;
-  white-space: nowrap;
+@keyframes tape {
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .hero-tape-item {
-  width: 100%;
-  height: 80px;
-  filter: brightness(0) invert(0.25);
-  border: 1px solid;
-  border-right: transparent;
-}
-
-.hero-tape-item:nth-child(2)>img {
-  scale: 1.5;
-}
-
-.hero-tape-item:nth-child(3)>img {
-  scale: 2.2;
+  max-width: 9rem;
+  aspect-ratio: 2;
 }
 
 .hero-tape-logo {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 @keyframes float {
@@ -236,6 +233,7 @@
 .float-box {
   animation: float 3s ease-in-out infinite;
 }
+
 
 
 @media (max-width: 36em) {
@@ -305,11 +303,5 @@
   .hero-badge-icon {
     width: 26px;
     height: 26px;
-  }
-
-  .up-hero,
-  .dn-hero {
-    width: 12px;
-    height: 12px;
   }
 }

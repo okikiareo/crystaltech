@@ -24,6 +24,9 @@ const Footer = () => {
                                 Explore
                             </h3>
                             <Link className="footer-item-link" to="">
+                                Products
+                            </Link>
+                            <Link className="footer-item-link" to="">
                                 About
                             </Link>
                             <Link className="footer-item-link" to="">
