@@ -10,7 +10,10 @@ const About = () => {
                         About Us
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint laborum nostrum provident accusantium? Soluta quaerat consectetur earum perspiciatis atque dolorem reprehenderit doloribus similique consequuntur ex esse natus, iusto aspernatur maiores quisquam odit adipisci debitis sint omnis quas animi, voluptate saepe.
+                        At CrystalTech, we’re dedicated to providing high-quality tech solutions—from dynamic web and apps,
+                        quality assurance, design, and IT consultancy to intelligent automation and AI-powered digital experiences. <br></br>
+                        Beyond services, we are committed to empowering the next generation, supporting businesses, individuals, and students in accessing tech opportunities.
+                        Rooted in innovation, our mission aligns with the UN Sustainable Development Goals (SDGs).
                     </p>
                     <Link className="about-col1-link btn" to="/about">
                         Learn More

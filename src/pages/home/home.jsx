@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Hero, About, Services, Blog, Testimonials, Contact } from "../../components";
+import { Hero, About, Services, Blog, Testimonials, Contact, Product } from "../../components";
 
 const Home = () => {
     const data = useLoaderData();
@@ -8,6 +8,7 @@ const Home = () => {
             <Hero />
             <About />
             <Services />
+            <Product/>
             <Blog posts={data.posts} />
             <Testimonials testimonials={data.testimonials} />
             <Contact />

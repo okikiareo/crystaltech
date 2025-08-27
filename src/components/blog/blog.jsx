@@ -11,11 +11,9 @@ const Blog = (props) => {
                     From the Blog
                 </h2>
                 <p className="blog-para">
-                    From repair hacks and buying guides to 
-                    web development, design trends, and IT 
-                    strategy, our blog offers practical insights 
-                    and tech inspiration for business owners 
-                    and curious techies alike.
+                From smart tech tips and buying guides to web development, design trends, 
+                and IT strategy, our blog delivers practical insights
+                 and inspiration for business owners and curious techies alike
                 </p>
                 <div className="blog-list">
                     {posts.map(blog => (

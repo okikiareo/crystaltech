@@ -56,7 +56,7 @@ const projects = [
         title: "AI Agent",
         description: "AI-powered assistant with natural language processing and task automation capabilities.",
         image: "/images/auto.jpg",
-        tag: "App",
+        tag: "n8n",
         link: "https://n8n.io/"
     },
     {

@@ -12,10 +12,9 @@ const Footer = () => {
                         <Logo name="footer-info-logo" />
                         <p className="footer-info-desc">
                             At Crystal Tech, we harness technology
-                            to make life simpler and smarter. From
-                            personalized solutions to trusted products,
-                            we help you stay ahead with seamless
-                            support and quality service.
+                            to make work simpler and smarter.
+                             delivering personalized solutions, seamless support,
+                              and innovative services to keep you ahead.
                         </p>
                     </div>
                     <div className="footer-list">
@@ -43,16 +42,18 @@ const Footer = () => {
                             <h3 className="footer-item-lead">
                                 Socials
                             </h3>
-                            <Link className="footer-item-link" to="">
+                            <Link className="footer-item-link" to="https://www.facebook.com/share/1FhmVcRiNe/?mibextid=qi2Omg" target="blank">
                                 Facebook
+                            </Link><Link className="footer-item-link" to="https://wa.me/2348145958678" target="blank">
+                                Whatsapp
                             </Link>
-                            <Link className="footer-item-link" to="">
+                            <Link className="footer-item-link" to="https://www.linkedin.com/company/crystaltech/" target="blank">
                                 LinkedIn
                             </Link>
-                            <Link className="footer-item-link" to="">
+                            <Link className="footer-item-link" to="https://www.instagram.com/crystaltech_ltd?igsh=MTgxZTRmYWoxdDRkaQ==" target="blank">
                                 Instagram
                             </Link>
-                            <Link className="footer-item-link" to="">
+                            <Link className="footer-item-link" to="https://x.com/CrystalTechLtd?t=EB1NvmnXArjRKbzZtvu8yw&s=09" target="blank">
                                 Twitter (X)
                             </Link>
                         </div>
@@ -64,7 +65,7 @@ const Footer = () => {
                                 aicrystaltech@gmail.com
                             </Link>
                             <Link className="footer-item-link" to="">
-                                +234 814 499 1849
+                                +234 814 595 8678 
                             </Link>
                         </div>
                     </div>
@@ -74,16 +75,16 @@ const Footer = () => {
                         &copy; 2025 CrystalTech All Rights Reserved
                     </div>
                     <div className="footer-hubs flex">
-                        <Link className="footer-hubs-link flex" to="">
+                        <Link className="footer-hubs-link flex" to="https://www.instagram.com/crystaltech_ltd?igsh=MTgxZTRmYWoxdDRkaQ==">
                             <RiInstagramLine />
                         </Link>
-                        <Link className="footer-hubs-link flex" to="">
+                        <Link className="footer-hubs-link flex" to="https://www.facebook.com/share/1FhmVcRiNe/?mibextid=qi2Omg">
                             <RiFacebookLine />
                         </Link>
-                        <Link className="footer-hubs-link flex" to="">
+                        <Link className="footer-hubs-link flex" to="https://www.linkedin.com/company/crystaltech/">
                             <RiLinkedinLine />
                         </Link>
-                        <Link className="footer-hubs-link flex" to="">
+                        <Link className="footer-hubs-link flex" to="https://x.com/CrystalTechLtd?t=EB1NvmnXArjRKbzZtvu8yw&s=09">
                             <RiTwitterXLine />
                         </Link>
                     </div>

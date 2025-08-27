@@ -12,7 +12,7 @@ const Contact = () => {
                     <p className="contact-para">
                         Get in touch today to explore
                         how we can simplify and enhance your
-                        tech needs, from development to repairs.
+                        tech needs, from development to support.
                     </p>
                     <Link 
                         className="contact-link contact-link-email btn" 
@@ -22,7 +22,7 @@ const Contact = () => {
                     </Link>
                     <Link 
                         className="contact-link contact-link-phone btn" 
-                        to="tel:+234814991849"
+                        to="tel:+2348145958678"
                     >
                         Prefer to talk?
                     </Link>

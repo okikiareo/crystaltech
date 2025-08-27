@@ -40,7 +40,10 @@
     font-size: var(--fs-300);
     font-weight: 500;
 }
-
+.header-list-link:hover {
+    font-weight: 500;
+    color:#ef8c2e;
+}
 .header-ctrl {
     width: 26px;
     position: relative;

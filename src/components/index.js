@@ -7,6 +7,7 @@ export { default as ServicesItem } from "./servicesItem/servicesItem";
 export { default as Testimonials } from "./testimonials/testimonials";
 export { default as TestimonialsCard } from "./testimonialsCard/testimonialsCard";
 export { default as TestimonialsShow } from "./testimonialsShow/testimonialsShow";
+export { default as Product } from "./product/product";
 export { default as Blog } from "./blog/blog";
 export { default as BlogCard } from "./blogCard/blogCard";
 export { default as Hero } from "./hero/hero";

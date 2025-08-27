@@ -14,7 +14,7 @@ const About = () => {
                         />
                     </h1>
                     <p className="About-row1-para">
-                        Founded in 2023, CrystalTech is a forward-thinking tech solutions company, we believe in the power of technology to simplify, enhance, and elevate your everyday experience.
+                        Founded in 2023, with the vision to build human capacity with the power of tech, CrystalTech is a forward-thinking tech solutions company, we believe in the power of technology to simplify, enhance, and elevate your everyday experience.
                     </p>
                 </div>
             </section>
@@ -25,7 +25,11 @@ const About = () => {
                             Why it matters
                         </h2>
                         <p className="About-row2-col1-text">
-                            Explore workshops, partnerships, and mentorship programs for empowerment in the digital age. Join us for coding, collaborations, and success guidance. Empowerment for all through tech opportunities. Join us in building an inclusive and innovative society.
+                            Explore workshops, partnerships, and mentorship programs for empowerment in the digital age. 
+                            Join us for collaborations, and success guidance. Empowerment for all through tech opportunities.
+                             Join us in building an inclusive and innovative society. <br />
+                             With a vision to drive innovation and inclusion, we align with the United Nations Sustainable Development 
+                              Goals (SDGs 4, 10 & 8) by promoting quality education reducing inequalities and fostering economic growth.
                         </p>
                     </div>
                     <div className="About-row2-col2">
@@ -96,7 +100,7 @@ const About = () => {
                             What We Do
                         </h2>
                         <p className="About-row3-col1-text">
-                            We create responsive web and app experiences, provide quality assurance and IT consultancy to keep systems running smoothly, design engaging interfaces, and offer expert repairs alongside the latest gadgets.
+                        We create responsive web and app experiences, provide quality assurance and IT consultancy to keep systems running smoothly, design engaging interfaces, and deliver AI-driven automation solutions that empower businesses and individuals.
                             {/* We specialize in creating responsive, user-focused web and app experiences, backed by thorough quality assurance and expert IT consultancy to keep your systems running smoothly. Our design services deliver captivating, conversion-driven interfaces, while our repair and gadget sales team provides skilled diagnostics and access to the latest devices. */}
                         </p>
                     </div>
@@ -146,11 +150,10 @@ const About = () => {
                             </div>
                             <div className="About-row3-card-info">
                                 <h3 className="About-row3-card-lead">
-                                    Repairs & Gadget Sales
+                                AI & Automation
                                 </h3>
                                 <p className="About-row3-card-text">
-                                    Whether it's expert device repairs or the latest gadgets, we provide reliable service and premium tech to keep you connected.
-                                </p>
+                                We create AI-driven solutions and smart automation systems that streamline workflows, boost productivity, and simplify everyday tasks.                                </p>
                             </div>
                         </div>
                     </div>

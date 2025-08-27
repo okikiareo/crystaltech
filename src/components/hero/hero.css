@@ -246,7 +246,7 @@
   .hero-tape-col2 {
     min-width: 170%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr)
+    grid-template-columns: repeat(7, 1fr)
   }
 }
 
