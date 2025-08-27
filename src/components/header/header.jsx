@@ -57,6 +57,15 @@ const Header = () => {
                         <li className="header-list-item">
                             <NavLink
                                 className={({ isActive }) => isActive ? "header-list-link" : "header-list-link"}
+                                to="/products"
+                                onClick={() => { state.menu && dispatch({ type: ACTIONS.TOGGLE_MENU }) }}
+                            >
+                                Products
+                            </NavLink>
+                        </li>
+                        <li className="header-list-item">
+                            <NavLink
+                                className={({ isActive }) => isActive ? "header-list-link" : "header-list-link"}
                                 to="/about"
                                 onClick={() => { state.menu && dispatch({ type: ACTIONS.TOGGLE_MENU }) }}
                             >
