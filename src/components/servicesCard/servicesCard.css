@@ -44,8 +44,6 @@
     column-gap: 1.5em;
 }
 
-
-
 .services-card:nth-child(1) {
     --services-cl-base: #4ECDC4;
     --services-cl-icon: var(--);
@@ -78,7 +76,6 @@
     background-color: #DFEAB5;
 }
 
-*/
 .services-card-icon > path {
     fill: var(--);
 }
