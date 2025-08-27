@@ -1,6 +1,13 @@
 import "./about.css";
+import { useSEO } from "../../hooks";
 
 const About = () => {
+    useSEO({
+        title: "About — CrystalTech",
+        description: "CrystalTech builds human capacity with technology: development, QA, design, and AI.",
+        url: "https://aicrystaltech.com/about",
+        image: "/images/logo.png",
+    });
     return (
         <main className="About">
             <section className="About-row1">

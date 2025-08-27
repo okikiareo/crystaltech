@@ -1,4 +1,5 @@
 import { Link, NavLink, useLoaderData, useSearchParams } from "react-router-dom";
+import { useSEO } from "../../hooks";
 import "./blog.css";
 import { formatDate } from "../../utils/functions";
 import { RiCalendarLine, RiArrowRightLine } from "react-icons/ri";
@@ -45,6 +46,12 @@ const Card = (props) => {
 const Blog = () => {
     const [searchParam, setSearchParam] = useSearchParams();
     const { posts } = useLoaderData();
+    useSEO({
+        title: "Blog — CrystalTech",
+        description: "Insights, tutorials, and trends on web, apps, QA, design, and AI.",
+        url: "https://aicrystaltech.com/blog",
+        image: "/images/logo.png",
+    });
     
     const filterParam = searchParam.get("type");
     const sortedPosts = filterParam ? 

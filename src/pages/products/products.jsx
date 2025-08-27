@@ -1,5 +1,5 @@
 
-
+import { useSEO } from "../../hooks";
 import "./products.css";
 
 const projects = [
@@ -78,6 +78,12 @@ const projects = [
 ];
 
 const Products = () => {
+    useSEO({
+        title: "Projects — CrystalTech",
+        description: "Selected projects across websites, e-commerce, apps, AI and more.",
+        url: "https://aicrystaltech.com/products",
+        image: "/images/project (4).jpg",
+    });
     return (
         <main className="products-page" aria-labelledby="products-heading">
             <section className="products-hero">
